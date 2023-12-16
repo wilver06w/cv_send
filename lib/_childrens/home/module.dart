@@ -1,4 +1,6 @@
 import 'package:cv_send/_childrens/home/page.dart' as page;
+import 'package:cv_send/_childrens/home/_childrens/detail_project/page.dart'
+    as detail_project;
 import 'package:cv_send/_childrens/home/_childrens/info/page.dart' as info;
 
 import 'package:cv_send/utils/http/http_client.dart';
@@ -21,6 +23,13 @@ class HomeModule extends Module {
         '/info',
         child: (_, args) => info.Page(
           pass: (args.data ?? {})['pass_number'] ?? 0,
+        ),
+        transition: TransitionType.fadeIn,
+      ),
+      ChildRoute(
+        '/project',
+        child: (_, args) => detail_project.Page(
+          itemProject: (args.data ?? {})['project'] ?? 0,
         ),
         transition: TransitionType.fadeIn,
       ),

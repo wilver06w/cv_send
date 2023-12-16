@@ -1,6 +1,7 @@
 import 'package:cv_send/_childrens/home/_childrens/info/bloc/bloc.dart';
 import 'package:cv_send/_childrens/home/_childrens/repository.dart';
 import 'package:cv_send/utils/colors.dart';
+import 'package:cv_send/utils/navigation.dart';
 import 'package:cv_send/utils/text/text.dart';
 import 'package:cv_send/utils/xigo_ui.dart';
 import 'package:cv_send/widget/option_title.dart';
@@ -159,21 +160,25 @@ class ProjectWidget extends StatelessWidget {
               (index) {
                 final project = state.model.projects[index];
                 return project.routeGif.isEmpty
-                    ? Image.asset(
-                        project.routeImage,
-                        height: 200,
+                    ? InkWell(
+                        onTap: () {
+                          XigoRoute.navProject(itemProject: project);
+                        },
+                        child: Image.asset(
+                          project.routeImage,
+                          height: 200,
+                        ),
                       )
-                    : GifView.asset(
-                        project.routeGif,
-                        height: 200,
-                        frameRate: 30,
+                    : InkWell(
+                        onTap: () {
+                          XigoRoute.navProject(itemProject: project);
+                        },
+                        child: GifView.asset(
+                          project.routeGif,
+                          height: 200,
+                          frameRate: 30,
+                        ),
                       );
-                // return Gif(
-                //   autostart: Autostart.loop,
-                //   image: const AssetImage(
-                //     InitProyectUiValues.tulGif,
-                //   ),
-                // );
               },
             ),
           );

@@ -17,6 +17,7 @@ class InitProyectUiValues {
       wideRangeProductsAndMakePurchaseSelectionTheirPrefferedSellers =
       "TUL App is the marketplace where users can naviegate a wide range of products and make purchase selection their preffered sellers.";
 
+  static const String hireForMyProject = "Hire for my project";
   static const String project = "Projects";
   static const String contact = "Contact";
   static const String descriptionMe =

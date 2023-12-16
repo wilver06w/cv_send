@@ -19,7 +19,9 @@ class HomeModule extends Module {
       ),
       ChildRoute(
         '/info',
-        child: (_, args) => const info.Page(),
+        child: (_, args) => info.Page(
+          pass: (args.data ?? {})['pass_number'] ?? 0,
+        ),
         transition: TransitionType.fadeIn,
       ),
     ];

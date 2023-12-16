@@ -6,7 +6,8 @@ class ItemProject extends Equatable {
     required this.subtitle,
     required this.about,
     required this.technologies,
-    required this.routeGif,
+    this.routeGif = '',
+    this.routeImage = '',
     required this.urlSite,
   });
 
@@ -15,6 +16,7 @@ class ItemProject extends Equatable {
   final String about;
   final String urlSite;
   final String routeGif;
+  final String routeImage;
   final List<String> technologies;
 
   factory ItemProject.fromJson(Map<String, dynamic> json) {
@@ -24,6 +26,7 @@ class ItemProject extends Equatable {
       urlSite: json['urlSite'],
       about: json['about'],
       routeGif: json['route_gif'],
+      routeImage: json['route_image'],
       technologies: json['technologies'],
     );
   }
@@ -36,6 +39,7 @@ class ItemProject extends Equatable {
       urlSite,
       about,
       routeGif,
+      routeImage,
       technologies,
     ];
   }

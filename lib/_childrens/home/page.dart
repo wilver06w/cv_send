@@ -48,7 +48,7 @@ class Page extends StatelessWidget {
                         OptionTitle(
                           title: InitProyectUiValues.project,
                           onTap: () {
-                            XigoRoute.navInfoReplaceName();
+                            XigoRoute.navInfoReplaceName(passNumber: 1);
                           },
                         ),
                         const SizedBox(
@@ -57,7 +57,7 @@ class Page extends StatelessWidget {
                         OptionTitle(
                           title: InitProyectUiValues.contact,
                           onTap: () {
-                            XigoRoute.navInfoReplaceName();
+                            XigoRoute.navInfoReplaceName(passNumber: 2);
                           },
                         ),
                       ],

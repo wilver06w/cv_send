@@ -6,15 +6,19 @@ import 'package:cv_send/utils/xigo_ui.dart';
 import 'package:cv_send/widget/option_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gif/gif.dart';
 import 'package:gif_view/gif_view.dart';
 import 'package:lottie/lottie.dart';
 
-part 'package:cv_send/_childrens/home/_childrens/info/_sections/item_responsability.dart';
 part 'package:cv_send/_childrens/home/_childrens/info/_sections/item_experience.dart';
+part 'package:cv_send/_childrens/home/_childrens/info/_sections/item_responsability.dart';
 
 class Page extends StatelessWidget {
-  const Page({super.key});
+  const Page({
+    super.key,
+    required this.pass,
+  });
+
+  final int pass;
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +26,10 @@ class Page extends StatelessWidget {
     return BlocProvider(
       create: (context) => BlocInfo(
         repository: Repository(),
-      )..add(
-          GetExperiencesEvent(),
-        ),
+      )
+        ..add(GetExperiencesEvent())
+        ..add(GetProjectsEvent())
+        ..add(ChangedOptionSelectedEvent(optionSelected: pass)),
       child: Scaffold(
         backgroundColor: XigoColors.backgroundColor,
         body: Padding(
@@ -141,28 +146,38 @@ class ProjectWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: GridView.count(
-        addAutomaticKeepAlives: true,
-        shrinkWrap: true,
-        mainAxisSpacing: 8.0, // spacing between rows
-        crossAxisSpacing: 8.0, // spacing between columns
-        crossAxisCount: 2,
-        children: List.generate(
-          5,
-          (index) {
-            return GifView.asset(
-              InitProyectUiValues.tulGif,
-              height: 200,
-              frameRate: 30,
-            );
-            // return Gif(
-            //   autostart: Autostart.loop,
-            //   image: const AssetImage(
-            //     InitProyectUiValues.tulGif,
-            //   ),
-            // );
-          },
-        ),
+      child: BlocBuilder<BlocInfo, InfoState>(
+        builder: (context, state) {
+          return GridView.count(
+            addAutomaticKeepAlives: true,
+            shrinkWrap: true,
+            mainAxisSpacing: 8.0, // spacing between rows
+            crossAxisSpacing: 8.0, // spacing between columns
+            crossAxisCount: 2,
+            children: List.generate(
+              state.model.projects.length,
+              (index) {
+                final project = state.model.projects[index];
+                return project.routeGif.isEmpty
+                    ? Image.asset(
+                        project.routeImage,
+                        height: 200,
+                      )
+                    : GifView.asset(
+                        project.routeGif,
+                        height: 200,
+                        frameRate: 30,
+                      );
+                // return Gif(
+                //   autostart: Autostart.loop,
+                //   image: const AssetImage(
+                //     InitProyectUiValues.tulGif,
+                //   ),
+                // );
+              },
+            ),
+          );
+        },
       ),
     );
   }

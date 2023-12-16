@@ -13,8 +13,9 @@ class InitProyectUiValues {
 
   static const String twentyOneTwentyThree = "2021-2023";
   static const String theMarketplaceAppTul = "The marketplace app of TUL.";
-  static const String wideRangeProductsAndMakePurchaseSelectionTheirPrefferedSellers = "TUL App is the marketplace where users can naviegate a wide range of products and make purchase selection their preffered sellers.";
-
+  static const String
+      wideRangeProductsAndMakePurchaseSelectionTheirPrefferedSellers =
+      "TUL App is the marketplace where users can naviegate a wide range of products and make purchase selection their preffered sellers.";
 
   static const String project = "Projects";
   static const String contact = "Contact";
@@ -37,7 +38,10 @@ class InitProyectUiValues {
   static const String linkedin = 'assets/animations/loading/linkdln.json';
   static const String github = 'assets/animations/loading/github.json';
 
-
   static const String tulGif = 'assets/gif/tul.gif';
   static const String acacomproGif = 'assets/gif/acacompro.gif';
+  static const String xigoClient = 'assets/gif/cliente.gif';
+  static const String xigoConductor = 'assets/gif/conductor.gif';
+  static const String somosjuniorGif = 'assets/gif/somosjunior.gif';
+  static const String acacomproProveedoresImage = 'assets/images/proveedores.png';
 }

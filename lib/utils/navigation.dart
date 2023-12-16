@@ -5,7 +5,12 @@ class XigoRoute {
     Modular.to.pushReplacementNamed('/home/');
   }
 
-  static navInfoReplaceName() async {
-    Modular.to.pushReplacementNamed('/home/info');
+  static navInfoReplaceName({int passNumber = 0}) async {
+    Modular.to.pushReplacementNamed(
+      '/home/info',
+      arguments: {
+        'pass_number': passNumber,
+      },
+    );
   }
 }

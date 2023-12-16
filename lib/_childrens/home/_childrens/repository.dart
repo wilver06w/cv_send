@@ -131,7 +131,7 @@ class Repository {
           'Dart',
           'Laravel',
         ],
-        routeGif: InitProyectUiValues.acacomproGif,
+        routeImage: InitProyectUiValues.acacomproProveedoresImage,
         urlSite:
             'https://play.google.com/store/apps/details?id=com.acacompro.proveedores',
       ),
@@ -147,7 +147,7 @@ class Repository {
           'MVC',
           'Laravel',
         ],
-        routeGif: InitProyectUiValues.acacomproGif,
+        routeGif: InitProyectUiValues.xigoClient,
         urlSite:
             'https://play.google.com/store/apps/details?id=com.motaxisas.motaxigo',
       ),
@@ -163,7 +163,7 @@ class Repository {
           'Dart',
           'Laravel',
         ],
-        routeGif: InitProyectUiValues.acacomproGif,
+        routeGif: InitProyectUiValues.xigoConductor,
         urlSite:
             'https://play.google.com/store/apps/details?id=com.motaxisas.motaxigoconductor',
       ),
@@ -179,7 +179,7 @@ class Repository {
           'MVC',
           'Laravel',
         ],
-        routeGif: InitProyectUiValues.acacomproGif,
+        routeImage: InitProyectUiValues.somosjuniorGif,
         urlSite:
             'https://play.google.com/store/apps/details?id=com.wfprogramador.somosjuniors',
       ),

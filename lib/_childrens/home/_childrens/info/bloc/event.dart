@@ -16,3 +16,4 @@ class ChangedOptionSelectedEvent extends InfoEvent {
 }
 
 class GetExperiencesEvent extends InfoEvent {}
+class GetProjectsEvent extends InfoEvent {}

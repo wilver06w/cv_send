@@ -19,10 +19,12 @@ class ItemResponsability extends StatelessWidget {
         const SizedBox(
           width: InitProyectUiValues.spacingXs,
         ),
-        XigoText.labelText(
-          label: item,
-          color: XigoColors.textColor,
-          decoration: TextDecoration.underline,
+        Flexible(
+          child: XigoText.labelText(
+              label: item,
+              color: XigoColors.textColor,
+              decoration: TextDecoration.underline,
+              textOverflow: TextOverflow.ellipsis),
         ),
       ],
     );

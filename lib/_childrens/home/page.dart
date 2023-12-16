@@ -15,6 +15,7 @@ class Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+
     return Scaffold(
       backgroundColor: XigoColors.backgroundColor,
       body: ListView(
@@ -29,9 +30,15 @@ class Page extends StatelessWidget {
                 color: Colors.white,
               ),
               size.width < 650
-                  ? const Icon(
-                      Icons.heat_pump_outlined,
-                      color: Colors.white,
+                  ? InkWell(
+                      onTap: () {
+                        XigoRoute.navInfo();
+                      },
+                      child: Lottie.asset(
+                        InitProyectUiValues.tapAnimation,
+                        width: 30,
+                        height: 30,
+                      ),
                     )
                   : Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -39,7 +46,7 @@ class Page extends StatelessWidget {
                         OptionTitle(
                           title: InitProyectUiValues.about,
                           onTap: () {
-                            XigoRoute.navInfoReplaceName();
+                            XigoRoute.navInfo();
                           },
                         ),
                         const SizedBox(
@@ -48,7 +55,7 @@ class Page extends StatelessWidget {
                         OptionTitle(
                           title: InitProyectUiValues.project,
                           onTap: () {
-                            XigoRoute.navInfoReplaceName(passNumber: 1);
+                            XigoRoute.navInfo(passNumber: 1);
                           },
                         ),
                         const SizedBox(
@@ -57,14 +64,17 @@ class Page extends StatelessWidget {
                         OptionTitle(
                           title: InitProyectUiValues.contact,
                           onTap: () {
-                            XigoRoute.navInfoReplaceName(passNumber: 2);
+                            XigoRoute.navInfo(passNumber: 2);
                           },
                         ),
                       ],
                     ),
             ],
           ),
-          const SizedBox(height: InitProyectUiValues.spacingXl * 3),
+          SizedBox(
+              height: size.width < 650
+                  ? InitProyectUiValues.spacingXl
+                  : InitProyectUiValues.spacingXl * 3),
           Shimmer(
             colorOpacity: 0.9,
             interval: const Duration(seconds: 5),
@@ -84,18 +94,23 @@ class Page extends StatelessWidget {
             color: XigoColors.textColor,
           ),
           const SizedBox(height: InitProyectUiValues.spacingMedium),
-          Row(
-            children: [
-              XigoText.labelText(
-                label: InitProyectUiValues.seeMoreAbout,
-                color: XigoColors.textColor,
-              ),
-              Lottie.asset(
-                InitProyectUiValues.tapAnimation,
-                width: 30,
-                height: 30,
-              ),
-            ],
+          InkWell(
+            onTap: () {
+              XigoRoute.navInfo();
+            },
+            child: Row(
+              children: [
+                XigoText.title(
+                    label: InitProyectUiValues.seeMoreAbout,
+                    color: XigoColors.textColor,
+                    fontWeight: FontWeight.bold),
+                Lottie.asset(
+                  InitProyectUiValues.tapAnimation,
+                  width: 30,
+                  height: 30,
+                ),
+              ],
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -45,29 +45,24 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           )..add(init.InitEvent()),
         ),
       ],
-      child: Listener(
-        onPointerDown: (e) {},
-        child: GestureDetector(
-          child: MaterialApp.router(
-            title: 'CVSend',
-            theme: ThemeData(
-              primarySwatch: Colors.teal,
-              textTheme: GoogleFonts.nunitoSansTextTheme(
-                Theme.of(context).textTheme,
-              ),
-            ),
-            routeInformationParser: Modular.routeInformationParser,
-            routerDelegate: Modular.routerDelegate,
-            builder: (context, child) {
-              return MediaQuery(
-                data: MediaQuery.of(context).copyWith(
-                  textScaler: const TextScaler.linear(1.0),
-                ),
-                child: child ?? const SizedBox.shrink(),
-              );
-            },
+      child: MaterialApp.router(
+        title: 'Wilver Rojas',
+        theme: ThemeData(
+          primarySwatch: Colors.teal,
+          textTheme: GoogleFonts.nunitoSansTextTheme(
+            Theme.of(context).textTheme,
           ),
         ),
+        routeInformationParser: Modular.routeInformationParser,
+        routerDelegate: Modular.routerDelegate,
+        builder: (context, child) {
+          return MediaQuery(
+            data: MediaQuery.of(context).copyWith(
+              textScaler: const TextScaler.linear(1.0),
+            ),
+            child: child ?? const SizedBox.shrink(),
+          );
+        },
       ),
     );
   }

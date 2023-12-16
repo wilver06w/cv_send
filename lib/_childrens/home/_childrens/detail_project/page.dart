@@ -5,6 +5,7 @@ import 'package:cv_send/utils/text/text.dart';
 import 'package:cv_send/utils/xigo_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gif_view/gif_view.dart';
 
 class Page extends StatelessWidget {
@@ -24,21 +25,44 @@ class Page extends StatelessWidget {
         )),
       child: Scaffold(
         backgroundColor: XigoColors.backgroundColor,
-        appBar: CustomAppBar(),
         body: SingleChildScrollView(
           child: Column(
             children: [
+              Row(
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Modular.to.pop();
+                    },
+                    child: const Icon(
+                      Icons.arrow_back_ios_new,
+                      color: Colors.white,
+                    ),
+                  ),
+                  BlocBuilder<DetailProjectBloc, DetailProjectState>(
+                    builder: (context, state) {
+                      return XigoText.labelText(
+                        label: state.model.itemProject.title,
+                        color: XigoColors.textColor,
+                        fontWeight: FontWeight.bold,
+                      );
+                    },
+                  ),
+                  const SizedBox.shrink(),
+                ],
+              ),
+              const SizedBox(
+                height: InitProyectUiValues.spacingMedium,
+              ),
               BlocBuilder<DetailProjectBloc, DetailProjectState>(
                 buildWhen: (_, state) => state is ChangedItemProjectState,
                 builder: (context, state) {
                   return state.model.itemProject.routeGif.isEmpty
                       ? Image.asset(
                           state.model.itemProject.routeImage,
-                          height: 200,
                         )
                       : GifView.asset(
                           state.model.itemProject.routeGif,
-                          height: 200,
                           frameRate: 30,
                         );
                 },

@@ -7,12 +7,14 @@ class InitProyectUiValues {
   static const String developer = 'assets/animations/loading/developer.json';
   static const String clientData = 'Client Data';
   static const String contact = "Contact";
+  static const String technologies = "Technologies";
   static const String descriptionMe =
       "It's a pleasure to meet you. Systems Engineer with strong mobile development skills in Android and Flutter. I have a passion for continuous learning, teamwork, and the mobile world in general. Technology and social causes also hold significant interest for me. \n\nI'm a responsible, creative, persistent, curious, patient, and organized individual who enjoys sharing knowledge with others. I'm highly motivated to work as a team developer, contribute to projects, and continuously expand my skills and professional development.\n\nSpecifically, I'm deeply interested in pursuing projects related to mobile development.\n\nMy skills include:\n\nProgramming Languages: Flutter, Dart, Java, Kotlin\n\nDatabases: Firebase, Postgres, MariaDB, MySQL, SQLite, MongoDB, SQL Server\n\nFrameworks: React\n\nVersion Control: Git\n\nAccessibility: Familiar with accessibility principles and best practices";
 
   static const String github = 'assets/animations/loading/github.json';
   static const String githubLink = 'https://github.com/wilver06w';
   static const String hireForMyProject = "Hire for my project";
+  static const String seeMoreAboutProject = "See more about the project";
   static const String iAm = "I'm Wilver Rojas";
   static const String lastestWorks = "Lastest works.";
   static const String linkedin = 'assets/animations/loading/linkdln.json';
@@ -28,6 +30,7 @@ class InitProyectUiValues {
   static const double spacingXSL = 32.0;
   static const double spacingXl = 36.0;
   static const double spacingXs = 4.0;
+  static const double spacingEight = 8.0;
   static const String tapAnimation = 'assets/animations/loading/tap.json';
   static const String theMarketplaceAppTul = "The marketplace app of TUL.";
   static const String writeMe = "Write me";

@@ -210,10 +210,12 @@ class IconTap extends StatelessWidget {
     required this.iconRoute,
     required this.onTap,
   });
-  final double width;
+
   final double height;
   final String iconRoute;
   final VoidCallback onTap;
+  final double width;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(

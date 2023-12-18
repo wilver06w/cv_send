@@ -1,6 +1,8 @@
 import 'package:cv_send/_childrens/home/_childrens/info/bloc/bloc.dart';
 import 'package:cv_send/_childrens/home/_childrens/repository.dart';
 import 'package:cv_send/utils/colors.dart';
+import 'package:cv_send/utils/functions.dart';
+import 'package:cv_send/utils/navigation.dart';
 import 'package:cv_send/utils/text/text.dart';
 import 'package:cv_send/utils/xigo_ui.dart';
 import 'package:cv_send/widget/option_title.dart';
@@ -9,8 +11,13 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gif_view/gif_view.dart';
 import 'package:lottie/lottie.dart';
 
+part 'package:cv_send/_childrens/home/_childrens/info/_sections/about_widget.dart';
+part 'package:cv_send/_childrens/home/_childrens/info/_sections/global_drawer.dart';
 part 'package:cv_send/_childrens/home/_childrens/info/_sections/item_experience.dart';
 part 'package:cv_send/_childrens/home/_childrens/info/_sections/item_responsability.dart';
+part 'package:cv_send/_childrens/home/_childrens/info/_sections/project_widget.dart';
+
+final GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey();
 
 class Page extends StatelessWidget {
   const Page({
@@ -19,7 +26,6 @@ class Page extends StatelessWidget {
   });
 
   final int pass;
-
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -31,10 +37,15 @@ class Page extends StatelessWidget {
         ..add(GetProjectsEvent())
         ..add(ChangedOptionSelectedEvent(optionSelected: pass)),
       child: Scaffold(
+        key: _scaffoldkey,
         backgroundColor: XigoColors.backgroundColor,
+        drawer: const GlobalDrawer(),
         body: Padding(
-          padding:
-              const EdgeInsets.all(InitProyectUiValues.spacingXl * 2).copyWith(
+          padding: EdgeInsets.all(
+            size.width < 650
+                ? InitProyectUiValues.spacingMedium
+                : InitProyectUiValues.spacingXl * 2,
+          ).copyWith(
             bottom: InitProyectUiValues.spacingMedium,
           ),
           child: ListView(
@@ -45,9 +56,25 @@ class Page extends StatelessWidget {
                 children: [
                   const SizedBox.shrink(),
                   size.width < 650
-                      ? const Icon(
-                          Icons.heat_pump_outlined,
-                          color: Colors.white,
+                      ? InkWell(
+                          onTap: () {
+                            _scaffoldkey.currentState?.openDrawer();
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.5),
+                                  blurRadius: 5.0,
+                                  spreadRadius: 2.0,
+                                ),
+                              ],
+                            ),
+                            child: const Icon(
+                              Icons.menu_rounded,
+                              color: Colors.white,
+                            ),
+                          ),
                         )
                       : BlocSelector<BlocInfo, InfoState, int>(
                           selector: (state) {
@@ -124,7 +151,44 @@ class Page extends StatelessWidget {
                     case 1:
                       return const ProjectWidget();
                     case 2:
-                      return const SizedBox();
+                      return Column(
+                        children: [
+                          XigoText.title(
+                            label: InitProyectUiValues.writeCallMe,
+                            color: XigoColors.textColor,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Flexible(
+                                child: InkWell(
+                                  onTap: () {
+                                    Functions.launchInBrowser(
+                                      url: InitProyectUiValues.wasapMe,
+                                    );
+                                  },
+                                  child: Lottie.asset(
+                                    InitProyectUiValues.wasapGif,
+                                    height: 200,
+                                  ),
+                                ),
+                              ),
+                              Flexible(
+                                child: InkWell(
+                                  onTap: () {
+                                    Functions.launchEmail();
+                                  },
+                                  child: Lottie.asset(
+                                    InitProyectUiValues.emailGif,
+                                    height: 200,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      );
                     default:
                       return const SizedBox();
                   }
@@ -138,109 +202,6 @@ class Page extends StatelessWidget {
   }
 }
 
-class ProjectWidget extends StatelessWidget {
-  const ProjectWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: BlocBuilder<BlocInfo, InfoState>(
-        builder: (context, state) {
-          return GridView.count(
-            addAutomaticKeepAlives: true,
-            shrinkWrap: true,
-            mainAxisSpacing: 8.0, // spacing between rows
-            crossAxisSpacing: 8.0, // spacing between columns
-            crossAxisCount: 2,
-            children: List.generate(
-              state.model.projects.length,
-              (index) {
-                final project = state.model.projects[index];
-                return project.routeGif.isEmpty
-                    ? Image.asset(
-                        project.routeImage,
-                        height: 200,
-                      )
-                    : GifView.asset(
-                        project.routeGif,
-                        height: 200,
-                        frameRate: 30,
-                      );
-                // return Gif(
-                //   autostart: Autostart.loop,
-                //   image: const AssetImage(
-                //     InitProyectUiValues.tulGif,
-                //   ),
-                // );
-              },
-            ),
-          );
-        },
-      ),
-    );
-  }
-}
-
-class AboutMeWidget extends StatelessWidget {
-  const AboutMeWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          XigoText.fontSizeCustom(
-            label: '${InitProyectUiValues.aboutMe}.',
-            fontWeight: FontWeight.bold,
-            fontSize: 32.0,
-            color: XigoColors.textColor,
-          ),
-          const SizedBox(
-            height: InitProyectUiValues.spacingXSL,
-          ),
-          XigoText.title(
-            label: InitProyectUiValues.lastestWorks,
-            fontWeight: FontWeight.bold,
-            color: XigoColors.textColor,
-          ),
-          const SizedBox(
-            height: InitProyectUiValues.spacingXSL,
-          ),
-          BlocBuilder<BlocInfo, InfoState>(
-            builder: (context, state) {
-              return Column(
-                children: List.generate(
-                  state.model.experiences.length,
-                  (index) {
-                    final item = state.model.experiences[index];
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: InitProyectUiValues.spacingXSL,
-                      ),
-                      child: ItemExperienceWidget(
-                        title: item.title,
-                        profile: item.profile,
-                        date: item.date,
-                        description: item.description,
-                        listResponsabilitys: item.resposabilitys,
-                      ),
-                    );
-                  },
-                ),
-              );
-            },
-          ),
-        ],
-      ),
-    );
-  }
-}
-
 class IconTap extends StatelessWidget {
   const IconTap({
     super.key,
@@ -249,10 +210,12 @@ class IconTap extends StatelessWidget {
     required this.iconRoute,
     required this.onTap,
   });
-  final double width;
+
   final double height;
   final String iconRoute;
   final VoidCallback onTap;
+  final double width;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(

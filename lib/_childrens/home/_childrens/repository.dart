@@ -110,7 +110,7 @@ class Repository {
       const ItemProject(
         title: 'Acacompro',
         subtitle: 'MarketPlace of products',
-        about: 'MarketPlace of products',
+        about: 'MarketPlace of products, style Mercadolibre',
         technologies: [
           'Flutter',
           'Provider',
@@ -142,6 +142,7 @@ class Repository {
             'Faster in each city and locate the city effectively #Colombia #Mexico',
         technologies: [
           'Java',
+          'Kotlin'
           'RxJava',
           'Retrofit',
           'MVC',

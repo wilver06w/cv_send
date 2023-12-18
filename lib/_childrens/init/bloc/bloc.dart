@@ -26,7 +26,7 @@ class Bloc extends bloc.Bloc<Event, State> {
     Emitter<State> emit,
   ) async {
     try {
-      await Future.delayed(const Duration(seconds: 6));
+      await Future.delayed(const Duration(seconds: 8));
       emit(LoadedState(state.model));
     } catch (e) {
       emit(ErrorState(state.model));

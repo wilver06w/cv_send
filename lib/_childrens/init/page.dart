@@ -15,22 +15,22 @@ class Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: XigoColors.greenColor,
+      backgroundColor: XigoColors.backgroundColor,
       body: BlocListener<bloc.Bloc, bloc.State>(
         listener: listener,
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Lottie.asset(
-                InitProyectUiValues.animation,
-              ),
-              XigoText.labelText(
-                label: InitProyectUiValues.welcomeToMyResum,
-                color: Colors.white,
-              ),
-            ],
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Lottie.asset(
+              InitProyectUiValues.developer,
+            ),
+            const SizedBox(height: InitProyectUiValues.spacingMedium),
+            XigoText.title(
+              label: InitProyectUiValues.welcomeToMyResum,
+              fontWeight: FontWeight.w700,
+              color: Colors.white,
+            ),
+          ],
         ),
       ),
     );

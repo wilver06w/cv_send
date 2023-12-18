@@ -41,13 +41,7 @@ class Page extends StatelessWidget {
         backgroundColor: XigoColors.backgroundColor,
         drawer: const GlobalDrawer(),
         body: Padding(
-          padding: EdgeInsets.all(
-            size.width < 650
-                ? InitProyectUiValues.spacingMedium
-                : InitProyectUiValues.spacingXl * 2,
-          ).copyWith(
-            bottom: InitProyectUiValues.spacingMedium,
-          ),
+          padding: const EdgeInsets.all(InitProyectUiValues.spacingMedium),
           child: ListView(
             children: [
               const SizedBox(height: InitProyectUiValues.spacingMedium),
@@ -140,59 +134,66 @@ class Page extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: InitProyectUiValues.spacingMedium),
-              BlocSelector<BlocInfo, InfoState, int>(
-                selector: (state) {
-                  return state.model.optionSelected;
-                },
-                builder: (context, value) {
-                  switch (value) {
-                    case 0:
-                      return const AboutMeWidget();
-                    case 1:
-                      return const ProjectWidget();
-                    case 2:
-                      return Column(
-                        children: [
-                          XigoText.title(
-                            label: InitProyectUiValues.writeCallMe,
-                            color: XigoColors.textColor,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Flexible(
-                                child: InkWell(
-                                  onTap: () {
-                                    Functions.launchInBrowser(
-                                      url: InitProyectUiValues.wasapMe,
-                                    );
-                                  },
-                                  child: Lottie.asset(
-                                    InitProyectUiValues.wasapGif,
-                                    height: 200,
+              Padding(
+                padding: EdgeInsets.all(
+                  size.width < 650
+                      ? InitProyectUiValues.spacingMedium
+                      : InitProyectUiValues.spacingXl * 2,
+                ),
+                child: BlocSelector<BlocInfo, InfoState, int>(
+                  selector: (state) {
+                    return state.model.optionSelected;
+                  },
+                  builder: (context, value) {
+                    switch (value) {
+                      case 0:
+                        return const AboutMeWidget();
+                      case 1:
+                        return const ProjectWidget();
+                      case 2:
+                        return Column(
+                          children: [
+                            XigoText.title(
+                              label: InitProyectUiValues.writeCallMe,
+                              color: XigoColors.textColor,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Flexible(
+                                  child: InkWell(
+                                    onTap: () {
+                                      Functions.launchInBrowser(
+                                        url: InitProyectUiValues.wasapMe,
+                                      );
+                                    },
+                                    child: Lottie.asset(
+                                      InitProyectUiValues.wasapGif,
+                                      height: 200,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Flexible(
-                                child: InkWell(
-                                  onTap: () {
-                                    Functions.launchEmail();
-                                  },
-                                  child: Lottie.asset(
-                                    InitProyectUiValues.emailGif,
-                                    height: 200,
+                                Flexible(
+                                  child: InkWell(
+                                    onTap: () {
+                                      Functions.launchEmail();
+                                    },
+                                    child: Lottie.asset(
+                                      InitProyectUiValues.emailGif,
+                                      height: 200,
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      );
-                    default:
-                      return const SizedBox();
-                  }
-                },
+                              ],
+                            ),
+                          ],
+                        );
+                      default:
+                        return const SizedBox();
+                    }
+                  },
+                ),
               ),
             ],
           ),

@@ -18,19 +18,21 @@ class Page extends StatelessWidget {
       backgroundColor: XigoColors.backgroundColor,
       body: BlocListener<bloc.Bloc, bloc.State>(
         listener: listener,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Lottie.asset(
-              InitProyectUiValues.developer,
-            ),
-            const SizedBox(height: InitProyectUiValues.spacingMedium),
-            XigoText.title(
-              label: InitProyectUiValues.welcomeToMyResum,
-              fontWeight: FontWeight.w700,
-              color: Colors.white,
-            ),
-          ],
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Lottie.asset(
+                InitProyectUiValues.developer,
+              ),
+              const SizedBox(height: InitProyectUiValues.spacingMedium),
+              XigoText.title(
+                label: InitProyectUiValues.welcomeToMyResum,
+                fontWeight: FontWeight.w700,
+                color: Colors.white,
+              ),
+            ],
+          ),
         ),
       ),
     );

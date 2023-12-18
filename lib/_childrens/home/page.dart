@@ -74,7 +74,7 @@ class Page extends StatelessWidget {
           SizedBox(
               height: size.width < 650
                   ? InitProyectUiValues.spacingXl
-                  : InitProyectUiValues.spacingXl * 3),
+                  : InitProyectUiValues.spacingXl * 2),
           Shimmer(
             colorOpacity: 0.9,
             interval: const Duration(seconds: 5),

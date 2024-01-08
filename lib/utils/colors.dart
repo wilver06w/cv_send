@@ -20,7 +20,13 @@ class XigoColors {
 
   //BackgroundColor
   static const Color backgroundColor = Color(0xff181a1b);
-  
+
   //TextColor
   static const Color textColor = Color(0xffe8e6e3);
+
+  //ContainerSelected
+  static const Color containerBorder = Color(0xff1382F6);
+
+
+  static const Color containerSelected = Color(0xff3B82F6);
 }

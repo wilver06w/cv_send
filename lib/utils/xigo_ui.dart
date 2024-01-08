@@ -1,9 +1,14 @@
 class InitProyectUiValues {
+  static const String myName = "Wilver Rojas Del Ducca";
   static const String about = "About";
   static const String aboutMe = "About Me";
+  static const String country = "Colombia";
+  static const String svgIconGitHub = "assets/svg/github.svg";
+  static const String svgIconWorld = "assets/svg/world.svg";
   static const String acacomproGif = 'assets/gif/acacompro.gif';
   static const String acacomproProveedoresImage =
       'assets/images/proveedores.png';
+  static const String imageMe = 'assets/images/me.jpg';
   static const String developer = 'assets/animations/loading/developer.json';
   static const String clientData = 'Client Data';
   static const String contact = "Contact";

@@ -49629,13 +49629,10 @@ A.abV.prototype={
 $0(){A.jg("https://github.com/wilver06w")},
 $S:0}
 A.L1.prototype={
-M(a){var s,r,q=null,p=t.l,o=A.d1(a,q,p).w,n=t.E,m=A.kd(A.a([new A.ud(new A.a6Q(),"Wilver Rojas Del Ducca",!1,q),B.xN,A.fa(B.k,q,q,"Mobile Developer",q,q,q),B.xN,A.eL(A.a([A.aB5("assets/svg/world.svg",q,16,16),B.Pa,A.fa(B.k,q,q,"Colombia",q,q,q)],n),B.R,B.aZ,B.V),B.lW,A.eL(A.a([new A.nq(new A.a6R(),"assets/svg/email.svg",q),B.ev,new A.nq(new A.a6S(),"assets/svg/linkdln.svg",q),B.ev,new A.nq(new A.a6T(),"assets/svg/github.svg",q),B.ev,new A.nq(new A.a6U(),"assets/svg/x.svg",q)],n),B.R,B.aZ,B.V)],n),B.be)
-o=o.a.a>1400
-s=o?200:150
-r=A.d1(a,q,p).w
-o=o?30:60
-p=A.d1(a,q,p).w
-return A.eL(A.a([m,A.qQ(new A.IT(A.xX(10),A.atA("assets/images/me.jpg",B.zK,1/0,1/0),q),r.a.b*(s*100/760)/100,p.a.a*(o*100/360)/100)],n),B.R,B.bF,B.V)}}
+M(a){var s=null,r=t.l,q=A.d1(a,s,r).w,p=t.E,o=A.kd(A.a([new A.ud(new A.a6Q(),"Wilver Rojas Del Ducca",!1,s),B.xN,A.fa(B.k,s,s,"Mobile Developer",s,s,s),B.xN,A.eL(A.a([A.aB5("assets/svg/world.svg",s,16,16),B.Pa,A.fa(B.k,s,s,"Colombia",s,s,s)],p),B.R,B.aZ,B.V),B.lW,A.eL(A.a([new A.nq(new A.a6R(),"assets/svg/email.svg",s),B.ev,new A.nq(new A.a6S(),"assets/svg/linkdln.svg",s),B.ev,new A.nq(new A.a6T(),"assets/svg/github.svg",s),B.ev,new A.nq(new A.a6U(),"assets/svg/x.svg",s)],p),B.R,B.aZ,B.V)],p),B.be),n=A.d1(a,s,r).w
+q=q.a.a>1400?30:60
+r=A.d1(a,s,r).w
+return A.eL(A.a([o,A.qQ(new A.IT(A.xX(10),A.atA("assets/images/me.jpg",B.zK,1/0,1/0),s),n.a.b*26.31578947368421/100,r.a.a*(q*100/360)/100)],p),B.R,B.bF,B.V)}}
 A.a6Q.prototype={
 $0(){A.jg("https://www.linkedin.com/in/wilver06w/")},
 $S:0}

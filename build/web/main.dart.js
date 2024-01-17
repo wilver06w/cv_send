@@ -49633,7 +49633,7 @@ M(a){var s,r,q=null,p=t.l,o=A.d1(a,q,p).w,n=t.E,m=A.kd(A.a([new A.ud(new A.a6Q()
 o=o.a.a>1400
 s=o?200:150
 r=A.d1(a,q,p).w
-o=o?30:90
+o=o?30:60
 p=A.d1(a,q,p).w
 return A.eL(A.a([m,A.qQ(new A.IT(A.xX(10),A.atA("assets/images/me.jpg",B.zK,1/0,1/0),q),r.a.b*(s*100/760)/100,p.a.a*(o*100/360)/100)],n),B.R,B.bF,B.V)}}
 A.a6Q.prototype={

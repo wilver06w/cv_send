@@ -92,7 +92,7 @@ class Header extends StatelessWidget {
         SizedBox(
           height: CvResponsive.heightSizeByContext(
             context,
-            pixels: size.width > 1400 ? 200 : 150,
+            pixels: 200,
           ),
           width: CvResponsive.withSizeByContext(
             context,

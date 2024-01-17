@@ -7,6 +7,7 @@ class Header extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -89,8 +90,14 @@ class Header extends StatelessWidget {
           ],
         ),
         SizedBox(
-          height: 110,
-          width: 120,
+          height: CvResponsive.heightSizeByContext(
+            context,
+            pixels: size.width > 1400 ? 200 : 150,
+          ),
+          width: CvResponsive.withSizeByContext(
+            context,
+            pixels: size.width > 1400 ? 30 : 90,
+          ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: Image.asset(

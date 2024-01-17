@@ -23,7 +23,14 @@ class InitProyectUiValues {
   static const String xLink = "https://twitter.com/wilver06w";
   static const String mePresentation = "Es un placer saludarte. Ingeniero de Sistemas con fuertes habilidades de desarrollo móvil en Android 3 y Flutter 3 años. Me apasiona el aprendizaje continuo, el trabajo en equipo y el mundo móvil en general. La tecnología y las causas sociales también tienen un gran interés para mí. Soy una persona responsable, creativa, persistente, curiosa, paciente y organizada que disfruta compartir conocimientos con los demás. Estoy altamente motivado para trabajar como desarrollador de equipos, contribuir a proyectos y ampliar continuamente mis habilidades y desarrollo profesional.\n\nEspecíficamente, estoy profundamente interesado en realizar proyectos relacionados con el desarrollo móvil.";
   static const String workExperience = "Experiencia Laboral";
+  static const String skills = "Habilidades";
 
+  static const String education = "Education";
+  static const String enginnerSystem = "Ingeniero de sistemas";
+  static const String integratedManagementSystems = "Especialización Sistemas Integrados de Gestion";
+  static const String uniPopularCesar = "Universidad Popular del Cesar";
+  static const String titleProfessional = "Titulo Profesional";
+  static const String postgraduate = "Posgrado";
 
   static const String github = 'assets/animations/loading/github.json';
   static const String hireForMyProject = "Hire for my project";

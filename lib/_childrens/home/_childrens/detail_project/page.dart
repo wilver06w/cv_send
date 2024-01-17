@@ -4,12 +4,11 @@ import 'package:cv_send/utils/colors.dart';
 import 'package:cv_send/utils/functions.dart';
 import 'package:cv_send/utils/text/text.dart';
 import 'package:cv_send/utils/xigo_ui.dart';
+import 'package:cv_send/widget/item_technologies.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gif_view/gif_view.dart';
-
-part 'package:cv_send/_childrens/home/_childrens/detail_project/_sections/item_technologies.dart';
 
 class Page extends StatelessWidget {
   const Page({

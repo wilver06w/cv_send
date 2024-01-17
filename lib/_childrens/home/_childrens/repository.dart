@@ -9,6 +9,8 @@ class Repository {
         title: InitProyectUiValues.tulSas,
         profile: InitProyectUiValues.mobileDeveloper,
         date: InitProyectUiValues.twentyOneTwentyThree,
+        descriptionSpanish:
+            'Estuve a cargo del Core del negocio, incluyendo autenticación, perfil de inicio, servicios, desarrollando funcionalidades desde 0%.',
         description:
             'I was in charge of the Core of the business, including authentication, home profile, services, developing functionalities from 0%',
         resposabilitys: [
@@ -34,6 +36,8 @@ class Repository {
         title: 'Acacompro',
         profile: InitProyectUiValues.mobileDeveloper,
         date: '2020-2021',
+        descriptionSpanish:
+            'Esto era un ecommerce, aquí jugué el rol de líder, definiendo la tecnología y comunicándome con la parte de producto para descargar los requerimientos y diseños.',
         description:
             'This was an ecommerce, here I played the role of leader, defining the technology and communicating with the product part to download the requirements and designs.',
         resposabilitys: [
@@ -54,8 +58,10 @@ class Repository {
         title: 'MotaxiGo',
         profile: InitProyectUiValues.mobileDeveloper,
         date: '2019-2021',
+        descriptionSpanish:
+            'Esto proyecto es una app de transporte, para servicios de taxis y motocicletas, aqui aporte en 3 aplicaciones por total, estuvo presente en bogota, y ciudades pequenias.',
         description:
-            'This was an ecommerce, here I played the role of leader, defining the technology and communicating with the product part to download the requirements and designs.',
+            'This project is a transportation app, for taxi and motorcycle services, here I contributed in 3 applications in total, it was present in Bogota, and small cities.',
         resposabilitys: [
           'Development of the XiGo platform',
           'Use of integrations with different payment gateways.',
@@ -69,6 +75,8 @@ class Repository {
         title: 'Dr Tecnology',
         profile: InitProyectUiValues.softwareDeveloper,
         date: '2019-2020',
+        descriptionSpanish:
+            'Desarrollador de software en plataformas de comercio electrónico como Vitrisur con el patrocinio de la cámara de comercio (https://vitrisur.com). con aplicación móvil.',
         description:
             'Software developer on e-commerce platforms such as Vitrisur being sponsored by the chamber of commerce (https://vitrisur.com). with mobile application.',
         resposabilitys: [
@@ -82,6 +90,8 @@ class Repository {
         title: 'Somos Junior',
         profile: InitProyectUiValues.mobileDeveloper,
         date: '2018-2021',
+        descriptionSpanish:
+            'Esta es una App de entretenimiento y noticias sobre un equipo de fútbol, Implementa los diseños y lo que se requiere',
         description:
             'This is an entertainment and news App about a soccer team, Implement the designs and what is required',
         resposabilitys: [
@@ -151,8 +161,8 @@ class Repository {
             'Faster in each city and locate the city effectively #Colombia #Mexico',
         technologies: [
           'Java',
-          'Kotlin'
-              'RxJava',
+          'Kotlin',
+          'RxJava',
           'Retrofit',
           'MVC',
           'Laravel',

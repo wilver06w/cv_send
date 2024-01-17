@@ -7,6 +7,7 @@ class ItemExperience extends Equatable {
     required this.date,
     required this.urlSite,
     required this.description,
+    required this.descriptionSpanish,
     required this.resposabilitys,
   });
 
@@ -14,6 +15,7 @@ class ItemExperience extends Equatable {
   final String profile;
   final String date;
   final String description;
+  final String descriptionSpanish;
   final String urlSite;
   final List<String> resposabilitys;
 
@@ -23,6 +25,7 @@ class ItemExperience extends Equatable {
       profile: json['profile'],
       date: json['date'],
       description: json['description'],
+      descriptionSpanish: json['description_spanish'],
       resposabilitys: json['resposabilitys'],
       urlSite: json['url_site'],
     );
@@ -36,6 +39,7 @@ class ItemExperience extends Equatable {
       profile,
       date,
       description,
+      descriptionSpanish,
       resposabilitys,
     ];
   }

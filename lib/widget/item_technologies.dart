@@ -1,4 +1,8 @@
-part of 'package:cv_send/_childrens/home/_childrens/detail_project/page.dart';
+
+import 'package:cv_send/utils/colors.dart';
+import 'package:cv_send/utils/text/text.dart';
+import 'package:cv_send/utils/xigo_ui.dart';
+import 'package:flutter/material.dart';
 
 class ItemTechnologies extends StatelessWidget {
   const ItemTechnologies({

@@ -4,9 +4,11 @@ class ItemText extends StatefulWidget {
   const ItemText({
     super.key,
     required this.onTap,
+    required this.textTile,
   });
 
   final VoidCallback onTap;
+  final String textTile;
 
   @override
   State<ItemText> createState() => _ItemTextState();
@@ -35,7 +37,7 @@ class _ItemTextState extends State<ItemText> {
           return InkWell(
             onTap: widget.onTap,
             child: XigoText.title(
-              label: InitProyectUiValues.myName,
+              label:widget.textTile,
               color: Colors.black,
               textStyle: TextStyle(
                 decoration:

@@ -5,6 +5,7 @@ class ItemExperience extends Equatable {
     required this.title,
     required this.profile,
     required this.date,
+    required this.urlSite,
     required this.description,
     required this.resposabilitys,
   });
@@ -13,6 +14,7 @@ class ItemExperience extends Equatable {
   final String profile;
   final String date;
   final String description;
+  final String urlSite;
   final List<String> resposabilitys;
 
   factory ItemExperience.fromJson(Map<String, dynamic> json) {
@@ -22,6 +24,7 @@ class ItemExperience extends Equatable {
       date: json['date'],
       description: json['description'],
       resposabilitys: json['resposabilitys'],
+      urlSite: json['url_site'],
     );
   }
 
@@ -29,6 +32,7 @@ class ItemExperience extends Equatable {
   List<Object?> get props {
     return [
       title,
+      urlSite,
       profile,
       date,
       description,

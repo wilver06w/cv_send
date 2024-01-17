@@ -27,6 +27,8 @@ class Repository {
           '	Clean architecture: modular and maintainable code.',
           '	Unit and integration tests: guarantee the functionality of the code.',
         ],
+        urlSite:
+            'https://play.google.com/store/apps/details?id=co.com.tul.ironmonger',
       ),
       const ItemExperience(
         title: 'Acacompro',
@@ -45,6 +47,8 @@ class Repository {
           'Push Notifications in Firebase.',
           'Applying Flutter Static Analysis.',
         ],
+        urlSite:
+            'https://play.google.com/store/apps/details?id=com.acacompro.acacompro',
       ),
       const ItemExperience(
         title: 'MotaxiGo',
@@ -58,6 +62,8 @@ class Repository {
           'Use of databases such as: Mysql and MongoDB.',
           'Use of Frameworks such as: Codeigniter, Creating REST APIs.',
         ],
+        urlSite:
+            'https://play.google.com/store/apps/details?id=com.motaxisas.motaxigo',
       ),
       const ItemExperience(
         title: 'Dr Tecnology',
@@ -70,6 +76,7 @@ class Repository {
           'Use of databases such as: Mysql and MongoDB.',
           'Creation app',
         ],
+        urlSite: 'https://vitrisur.com/',
       ),
       const ItemExperience(
         title: 'Somos Junior',
@@ -83,6 +90,8 @@ class Repository {
           'Use of databases such as: Mysql and MongoDB.',
           'Use of Frameworks such as: Codeigniter, Creating REST APIs.',
         ],
+        urlSite:
+            'https://play.google.com/store/apps/details?id=com.wfprogramador.somosjuniors',
       ),
     ];
   }
@@ -143,7 +152,7 @@ class Repository {
         technologies: [
           'Java',
           'Kotlin'
-          'RxJava',
+              'RxJava',
           'Retrofit',
           'MVC',
           'Laravel',

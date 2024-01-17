@@ -15,6 +15,7 @@ class Header extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ItemText(
+              textTile: InitProyectUiValues.myName,
               onTap: () {
                 Functions.launchInBrowser(
                   url: InitProyectUiValues.linkedinLink,
@@ -52,22 +53,36 @@ class Header extends StatelessWidget {
               children: [
                 ItemContainerSvg(
                   svgUrl: InitProyectUiValues.svgEmail,
-                  onTap: () {},
+                  onTap: () {
+                    Functions.launchEmail();
+                  },
                 ),
                 const Gap(CvSpacing.sm),
                 ItemContainerSvg(
-                  onTap: () {},
+                  onTap: () {
+                    Functions.launchInBrowser(
+                      url: InitProyectUiValues.linkedinLink,
+                    );
+                  },
                   svgUrl: InitProyectUiValues.svgLinkdln,
                 ),
                 const Gap(CvSpacing.sm),
                 ItemContainerSvg(
                   svgUrl: InitProyectUiValues.svgIconGitHub,
-                  onTap: () {},
+                  onTap: () {
+                    Functions.launchInBrowser(
+                      url: InitProyectUiValues.githubLink,
+                    );
+                  },
                 ),
                 const Gap(CvSpacing.sm),
                 ItemContainerSvg(
                   svgUrl: InitProyectUiValues.svgX,
-                  onTap: () {},
+                  onTap: () {
+                    Functions.launchInBrowser(
+                      url: InitProyectUiValues.xLink,
+                    );
+                  },
                 ),
               ],
             ),

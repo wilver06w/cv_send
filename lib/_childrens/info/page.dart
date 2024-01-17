@@ -2,10 +2,14 @@ import 'dart:async';
 
 import 'package:cv_send/utils/colors.dart';
 import 'package:cv_send/utils/functions.dart';
+import 'package:cv_send/utils/spacing.dart';
 import 'package:cv_send/utils/text/text.dart';
 import 'package:cv_send/utils/xigo_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
+
+part 'package:cv_send/_childrens/info/_sections/header.dart';
 
 class Page extends StatelessWidget {
   const Page({super.key});
@@ -18,89 +22,18 @@ class Page extends StatelessWidget {
           vertical: InitProyectUiValues.spacingXSL,
           horizontal: InitProyectUiValues.spacingXSL,
         ),
-        children: const [
-          Header(),
+        children: [
+          const Header(),
+          const Gap(
+            CvSpacing.lg,
+          ),
+          XigoText.fontSizeCustom(
+            label: InitProyectUiValues.aboutMeSpanish,
+            fontSize: 20,
+            fontWeight: FontWeight.w700,
+          ),
         ],
       ),
-    );
-  }
-}
-
-class Header extends StatelessWidget {
-  const Header({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            InkWell(
-              onTap: () {
-                Functions.launchInBrowser(
-                  url: InitProyectUiValues.linkedinLink,
-                );
-              },
-              child: XigoText.title(
-                label: InitProyectUiValues.myName,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(
-              height: InitProyectUiValues.spacingEight,
-            ),
-            XigoText.labelText(
-              label: InitProyectUiValues.mobileDeveloper,
-              color: Colors.black,
-            ),
-            const SizedBox(
-              height: InitProyectUiValues.spacingEight,
-            ),
-            Row(
-              children: [
-                SvgPicture.asset(
-                  InitProyectUiValues.svgIconWorld,
-                  height: InitProyectUiValues.spacingMedium,
-                  width: InitProyectUiValues.spacingMedium,
-                ),
-                const SizedBox(
-                  width: InitProyectUiValues.spacingEight,
-                ),
-                XigoText.labelText(
-                  label: InitProyectUiValues.country,
-                  color: Colors.black,
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                ItemUrl(
-                  onTap: () {},
-                ),
-              ],
-            ),
-          ],
-        ),
-        SizedBox(
-          height: 110,
-          width: 120,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Image.asset(
-              InitProyectUiValues.imageMe,
-              width: double.infinity,
-              height: double.infinity,
-              fit: BoxFit.fill,
-            ),
-          ),
-        ),
-      ],
     );
   }
 }
@@ -109,9 +42,11 @@ class ItemUrl extends StatefulWidget {
   const ItemUrl({
     super.key,
     required this.onTap,
+    required this.svgUrl,
   });
 
   final VoidCallback onTap;
+  final String svgUrl;
 
   @override
   State<ItemUrl> createState() => _ItemUrlState();
@@ -155,9 +90,15 @@ class _ItemUrlState extends State<ItemUrl> {
               InitProyectUiValues.spacingEight,
             ),
             child: SvgPicture.asset(
-              InitProyectUiValues.svgIconGitHub,
+              widget.svgUrl,
               height: 20,
               width: 20,
+              colorFilter: ColorFilter.mode(
+                (snapshot.data ?? false)
+                    ? Colors.white
+                    : XigoColors.containerBorder,
+                BlendMode.srcIn,
+              ),
             ),
           );
         },

@@ -15,6 +15,8 @@ class XigoColors {
   ///primaryColor
   static const Color primaryColor = Color(0xff77838F);
 
+  //colorText
+  static const Color colorText = Color(0xffe5e7eb);
   //Green
   static const Color greenColor = Color(0xff0E440A);
 

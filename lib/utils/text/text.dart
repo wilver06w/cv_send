@@ -1,4 +1,3 @@
-import 'package:cv_send/utils/colors.dart';
 import 'package:cv_send/utils/text/typography.dart';
 import 'package:flutter/material.dart';
 

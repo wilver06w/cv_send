@@ -14,17 +14,12 @@ class Header extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            InkWell(
+            ItemText(
               onTap: () {
                 Functions.launchInBrowser(
                   url: InitProyectUiValues.linkedinLink,
                 );
               },
-              child: XigoText.title(
-                label: InitProyectUiValues.myName,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              ),
             ),
             const SizedBox(
               height: InitProyectUiValues.spacingEight,
@@ -55,22 +50,22 @@ class Header extends StatelessWidget {
             const Gap(CvSpacing.sl),
             Row(
               children: [
-                ItemUrl(
+                ItemContainerSvg(
                   svgUrl: InitProyectUiValues.svgEmail,
                   onTap: () {},
                 ),
                 const Gap(CvSpacing.sm),
-                ItemUrl(
+                ItemContainerSvg(
                   onTap: () {},
                   svgUrl: InitProyectUiValues.svgLinkdln,
                 ),
                 const Gap(CvSpacing.sm),
-                ItemUrl(
+                ItemContainerSvg(
                   svgUrl: InitProyectUiValues.svgIconGitHub,
                   onTap: () {},
                 ),
                 const Gap(CvSpacing.sm),
-                ItemUrl(
+                ItemContainerSvg(
                   svgUrl: InitProyectUiValues.svgX,
                   onTap: () {},
                 ),

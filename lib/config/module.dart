@@ -1,7 +1,6 @@
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:cv_send/_childrens/home/module.dart';
-import 'package:cv_send/_childrens/init/page.dart' as splash;
 import 'package:cv_send/_childrens/info/page.dart' as info;
+import 'package:flutter_modular/flutter_modular.dart';
 
 class GlobalModule extends Module {
   @override

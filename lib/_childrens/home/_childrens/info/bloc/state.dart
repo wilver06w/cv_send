@@ -41,8 +41,6 @@ class Model extends Equatable {
       'GitHub',
       'GitLab',
       'OpenAi',
-      'OpenAi',
-      'OpenAi',
     ],
   });
 

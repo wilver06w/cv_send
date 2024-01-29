@@ -21,16 +21,37 @@ class InitProyectUiValues {
   static const String githubLink = 'https://github.com/wilver06w';
   static const String linkedinLink = 'https://www.linkedin.com/in/wilver06w/';
   static const String xLink = "https://twitter.com/wilver06w";
-  static const String mePresentation = "Es un placer saludarte. Ingeniero de Sistemas con fuertes habilidades de desarrollo móvil en Android 3 y Flutter 3 años. Me apasiona el aprendizaje continuo, el trabajo en equipo y el mundo móvil en general. La tecnología y las causas sociales también tienen un gran interés para mí. Soy una persona responsable, creativa, persistente, curiosa, paciente y organizada que disfruta compartir conocimientos con los demás. Estoy altamente motivado para trabajar como desarrollador de equipos, contribuir a proyectos y ampliar continuamente mis habilidades y desarrollo profesional.\n\nEspecíficamente, estoy profundamente interesado en realizar proyectos relacionados con el desarrollo móvil.";
+  static const String mePresentation =
+      "Es un placer saludarte. Ingeniero de Sistemas con fuertes habilidades de desarrollo móvil en Android 3 y Flutter 3 años. Me apasiona el aprendizaje continuo, el trabajo en equipo y el mundo móvil en general. La tecnología y las causas sociales también tienen un gran interés para mí. Soy una persona responsable, creativa, persistente, curiosa, paciente y organizada que disfruta compartir conocimientos con los demás. Estoy altamente motivado para trabajar como desarrollador de equipos, contribuir a proyectos y ampliar continuamente mis habilidades y desarrollo profesional.\n\nEspecíficamente, estoy profundamente interesado en realizar proyectos relacionados con el desarrollo móvil.";
   static const String workExperience = "Experiencia Laboral";
   static const String skills = "Habilidades";
 
-  static const String education = "Education";
+  static const String education = "Educacion";
   static const String enginnerSystem = "Ingeniero de sistemas";
-  static const String integratedManagementSystems = "Especialización Sistemas Integrados de Gestion";
+  static const String integratedManagementSystems =
+      "Especialización Sistemas Integrados de Gestion";
   static const String uniPopularCesar = "Universidad Popular del Cesar";
   static const String titleProfessional = "Titulo Profesional";
   static const String postgraduate = "Posgrado";
+  static const String verifik = "Verifik";
+  static const String verifikGif = 'assets/gif/verifik.gif';
+  static const String verifikPng = 'assets/images/verifik.png';
+  static const String verifikTitle = 'Aplicacione demo';
+  static const String verifikDesc =
+      "Aplicacion de reconocimiento de imagenes y fotos, conectada a la API demo de Verifik. Realizadas con fines demostrativos, para perfil Flutter Web.";
+  static const String taskR5Gif = 'assets/gif/R5.gif';
+  static const String taskR5Jpg = 'assets/images/r5.jpg';
+  static const String taskR5 = "Task R5";
+  static const String r5Title = 'Aplicacione multi task para R5';
+  static const String r5Desc =
+      "Aplicacion de administracion de tareas, hecha con firestore and cloud funcitions, realizadas con fines demostrativos, para perfil Flutter.";
+  static const String yuGiOhGif = 'assets/gif/yugioh.gif';
+  static const String yuGiOhJpg = 'assets/images/yugioh.jpg';
+  static const String yuGiOhTitle = "Yu Gi Oh!";
+  static const String yuGiOhSubTitle =
+      'Aplicacion para mostrar cartas de YuGiOh';
+  static const String yuGiOhDesc =
+      "Aplicacion de busqueda de arquetipos de cartas en YuGiOh, hecha con API REST, realizadas con fines demostrativos, para perfil Flutter.";
 
   static const String github = 'assets/animations/loading/github.json';
   static const String hireForMyProject = "Hire for my project";
@@ -40,7 +61,7 @@ class InitProyectUiValues {
   static const String linkedin = 'assets/animations/loading/linkdln.json';
   static const String logo = 'assets/icons/icon_origin.svg';
   static const String mobileDeveloper = "Mobile Developer";
-  static const String project = "Projects";
+  static const String project = "Proyectos";
   static const String seeMoreAbout = "See More About Me";
   static const String softwareDeveloper = "Software developer";
   static const String somosjuniorGif = 'assets/gif/somosjunior.gif';

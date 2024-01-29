@@ -4,6 +4,7 @@ import 'package:cv_send/_childrens/home/_childrens/info/bloc/bloc.dart';
 import 'package:cv_send/_childrens/home/_childrens/repository.dart';
 import 'package:cv_send/utils/colors.dart';
 import 'package:cv_send/utils/functions.dart';
+import 'package:cv_send/utils/navigation.dart';
 import 'package:cv_send/utils/responsive.dart';
 import 'package:cv_send/utils/spacing.dart';
 import 'package:cv_send/utils/text/text.dart';
@@ -13,6 +14,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:gif_view/gif_view.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 part 'package:cv_send/_childrens/info/_sections/header.dart';
@@ -38,7 +40,8 @@ class Page extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             vertical:
                 size.height > 1400 ? size.height * 0.2 : size.height * 0.1,
-            horizontal: size.width > 1400 ? size.width * 0.32 : size.width * 0.23,
+            horizontal:
+                size.width > 1400 ? size.width * 0.32 : size.width * 0.07,
           ),
           children: [
             const Header(),
@@ -120,6 +123,58 @@ class Page extends StatelessWidget {
                             title: item,
                           ),
                           const Gap(CvSpacing.sl),
+                        ],
+                      );
+                    },
+                  ),
+                );
+              },
+            ),
+            const Gap(CvSpacing.md),
+            XigoText.fontSizeCustom(
+              label: InitProyectUiValues.project,
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+            ),
+            const Gap(CvSpacing.md),
+            BlocBuilder<BlocInfo, InfoState>(
+              builder: (context, state) {
+                return Wrap(
+                  spacing: CvSpacing.xs,
+                  children: List.generate(
+                    state.model.projects.length,
+                    (index) {
+                      final project = state.model.projects[index];
+                      return Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          XigoText.body(
+                            label: project.title,
+                            textStyle: GoogleFonts.lato(),
+                          ),
+                          const Gap(CvSpacing.xs),
+                          project.routeGif.isEmpty
+                              ? InkWell(
+                                  onTap: () {
+                                    XigoRoute.navProject(itemProject: project);
+                                  },
+                                  child: Image.asset(
+                                    project.routeImage,
+                                    height: 200,
+                                    width: 200,
+                                  ),
+                                )
+                              : InkWell(
+                                  onTap: () {
+                                    XigoRoute.navProject(itemProject: project);
+                                  },
+                                  child: GifView.asset(
+                                    project.routeGif,
+                                    height: 200,
+                                    width: 200,
+                                    frameRate: 30,
+                                  ),
+                                ),
                         ],
                       );
                     },

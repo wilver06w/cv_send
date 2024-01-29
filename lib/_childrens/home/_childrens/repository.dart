@@ -57,7 +57,7 @@ class Repository {
       const ItemExperience(
         title: 'MotaxiGo',
         profile: InitProyectUiValues.mobileDeveloper,
-        date: '2019-2021',
+        date: '2018-2020',
         descriptionSpanish:
             'Esto proyecto es una app de transporte, para servicios de taxis y motocicletas, aqui aporte en 3 aplicaciones por total, estuvo presente en bogota, y ciudades pequenias.',
         description:
@@ -108,6 +108,50 @@ class Repository {
 
   List<ItemProject> getProjects() {
     return [
+      const ItemProject(
+        title: InitProyectUiValues.yuGiOhTitle,
+        subtitle: InitProyectUiValues.yuGiOhSubTitle,
+        about: InitProyectUiValues.yuGiOhDesc,
+        technologies: [
+          'Flutter',
+          'Bloc',
+          'Dart',
+          'Kotlin',
+          'Modular',
+        ],
+        routeImage: InitProyectUiValues.yuGiOhJpg,
+        urlSite: 'https://github.com/wilver06w/yugioh',
+      ),
+      const ItemProject(
+        title: InitProyectUiValues.taskR5,
+        subtitle: InitProyectUiValues.r5Title,
+        about: InitProyectUiValues.r5Desc,
+        technologies: [
+          'Flutter',
+          'Bloc',
+          'Dart',
+          'Kotlin',
+          'Modular',
+          'Firebase',
+          'Firestore',
+        ],
+        routeImage: InitProyectUiValues.taskR5Jpg,
+        urlSite: 'https://github.com/wilver06w/r5',
+      ),
+      const ItemProject(
+        title: InitProyectUiValues.verifik,
+        subtitle: InitProyectUiValues.verifikTitle,
+        about: InitProyectUiValues.verifikDesc,
+        technologies: [
+          'Flutter',
+          'Bloc',
+          'Dart',
+          'Kotlin',
+          'Modular',
+        ],
+        routeImage: InitProyectUiValues.verifikPng,
+        urlSite: 'https://github.com/wilver06w/verifik',
+      ),
       const ItemProject(
         title: InitProyectUiValues.tulSas,
         subtitle: InitProyectUiValues.theMarketplaceAppTul,

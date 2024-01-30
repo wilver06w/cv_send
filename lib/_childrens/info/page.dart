@@ -41,7 +41,7 @@ class Page extends StatelessWidget {
             vertical:
                 size.height > 1400 ? size.height * 0.2 : size.height * 0.1,
             horizontal:
-                size.width > 1400 ? size.width * 0.32 : size.width * 0.07,
+                size.width > 1300 ? size.width * 0.28 : size.width * 0.07,
           ),
           children: [
             const Header(),

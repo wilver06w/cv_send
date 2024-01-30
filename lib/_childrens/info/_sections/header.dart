@@ -96,7 +96,7 @@ class Header extends StatelessWidget {
           ),
           width: CvResponsive.withSizeByContext(
             context,
-            pixels: size.width > 1400 ? 30 : 60,
+            pixels: size.width > 1300 ? 30 : 60,
           ),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),

@@ -56,7 +56,7 @@ class Page extends StatelessWidget {
               label: InitProyectUiValues.mePresentation,
               textStyle: GoogleFonts.lato(),
               fontWeight: FontWeight.w400,
-              textAlign: TextAlign.justify,
+              textAlign: TextAlign.start,
             ),
             const Gap(CvSpacing.xxl),
             XigoText.fontSizeCustom(

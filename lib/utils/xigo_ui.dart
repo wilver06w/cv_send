@@ -47,7 +47,14 @@ class InitProyectUiValues {
       "Aplicacion de administracion de tareas, hecha con firestore and cloud funcitions, realizadas con fines demostrativos, para perfil Flutter.";
   static const String yuGiOhGif = 'assets/gif/yugioh.gif';
   static const String yuGiOhJpg = 'assets/images/yugioh.jpg';
+  static const String protiendasGif = 'assets/gif/protiendas.gif';
   static const String yuGiOhTitle = "Yu Gi Oh!";
+  static const String proTiendasTitle = "Protiendas!";
+  static const String proTiendasSubTitle =
+      'MarketPlace de productos masivos';
+      static const String aplicacionMvpMarketPlace =
+      "MVP MarketPlace, esta en fase beta de desarrollo, con el fin de mostrar el MVP de una aplicacion de MarketPlace, hecha con flutter y BLOC como manejador de estado";
+
   static const String yuGiOhSubTitle =
       'Aplicacion para mostrar cartas de YuGiOh';
   static const String yuGiOhDesc =

@@ -19,20 +19,22 @@ class ItemEducation extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            XigoText.labelText(
-              label: ubication,
-              color: Colors.black,
-              fontWeight: FontWeight.w600,
-            ),
-            const Gap(CvSpacing.md),
-            XigoText.labelText(
-              label: title,
-              textStyle: GoogleFonts.robotoMono(),
-            ),
-          ],
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              XigoText.labelText(
+                label: ubication,
+                color: Colors.black,
+                fontWeight: FontWeight.w600,
+              ),
+              const Gap(CvSpacing.md),
+              XigoText.labelText(
+                label: title,
+                textStyle: GoogleFonts.robotoMono(),
+              ),
+            ],
+          ),
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.end,

@@ -108,6 +108,25 @@ class Repository {
 
   List<ItemProject> getProjects() {
     return [
+      //TODO: Descomentar, revisar
+      // const ItemProject(
+      //   title: InitProyectUiValues.proTiendasTitle,
+      //   subtitle: InitProyectUiValues.proTiendasSubTitle,
+      //   about: InitProyectUiValues.aplicacionMvpMarketPlace,
+      //   technologies: [
+      //     'Flutter',
+      //     'Bloc',
+      //     'Dart',
+      //     'Modular',
+      //     'Dio',
+      //     'Singleton',
+      //     'ListView Builder',
+      //     'Inyeccion de dependencias',
+      //     'Navigator',
+      //   ],
+      //   routeGif:  InitProyectUiValues.protiendasGif,
+      //   urlSite: 'https://github.com/wilver06w/protiendas',
+      // ),
       const ItemProject(
         title: InitProyectUiValues.yuGiOhTitle,
         subtitle: InitProyectUiValues.yuGiOhSubTitle,

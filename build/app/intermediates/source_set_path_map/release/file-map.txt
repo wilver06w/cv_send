@@ -1,0 +1,18 @@
+com.example.cv_send.app-core-1.10.1-0 C:\Users\rojaswf\.gradle\caches\transforms-3\0235b77ff31bafac24f24ba4755d72b8\transformed\core-1.10.1\res
+com.example.cv_send.app-lifecycle-runtime-2.3.1-1 C:\Users\rojaswf\.gradle\caches\transforms-3\2454e6630756f136714cbb0c5cadfbb6\transformed\lifecycle-runtime-2.3.1\res
+com.example.cv_send.app-jetified-window-1.0.0-beta04-2 C:\Users\rojaswf\.gradle\caches\transforms-3\29fe38a5fd6c3bf46cd8e59c2b63489e\transformed\jetified-window-1.0.0-beta04\res
+com.example.cv_send.app-jetified-window-java-1.0.0-beta04-3 C:\Users\rojaswf\.gradle\caches\transforms-3\978180320ed1d29d66a82edc9d24751e\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.cv_send.app-jetified-annotation-experimental-1.3.0-4 C:\Users\rojaswf\.gradle\caches\transforms-3\9916c0031c0bf84af67bab9d951a13f5\transformed\jetified-annotation-experimental-1.3.0\res
+com.example.cv_send.app-browser-1.5.0-5 C:\Users\rojaswf\.gradle\caches\transforms-3\b1acc2901c10af5ded931c46dd883cb9\transformed\browser-1.5.0\res
+com.example.cv_send.app-main-6 C:\Users\rojaswf\OneDrive - GLOBAL HITSS\Documentos\GitHub\cv_send\android\app\src\main\res
+com.example.cv_send.app-release-7 C:\Users\rojaswf\OneDrive - GLOBAL HITSS\Documentos\GitHub\cv_send\android\app\src\release\res
+com.example.cv_send.app-pngs-8 C:\Users\rojaswf\OneDrive - GLOBAL HITSS\Documentos\GitHub\cv_send\build\app\generated\res\pngs\release
+com.example.cv_send.app-resValues-9 C:\Users\rojaswf\OneDrive - GLOBAL HITSS\Documentos\GitHub\cv_send\build\app\generated\res\resValues\release
+com.example.cv_send.app-rs-10 C:\Users\rojaswf\OneDrive - GLOBAL HITSS\Documentos\GitHub\cv_send\build\app\generated\res\rs\release
+com.example.cv_send.app-mergeReleaseResources-11 C:\Users\rojaswf\OneDrive - GLOBAL HITSS\Documentos\GitHub\cv_send\build\app\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.example.cv_send.app-mergeReleaseResources-12 C:\Users\rojaswf\OneDrive - GLOBAL HITSS\Documentos\GitHub\cv_send\build\app\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.example.cv_send.app-merged_res-13 C:\Users\rojaswf\OneDrive - GLOBAL HITSS\Documentos\GitHub\cv_send\build\app\intermediates\merged_res\release
+com.example.cv_send.app-packaged_res-14 C:\Users\rojaswf\OneDrive - GLOBAL HITSS\Documentos\GitHub\cv_send\build\package_info_plus\intermediates\packaged_res\release
+com.example.cv_send.app-packaged_res-15 C:\Users\rojaswf\OneDrive - GLOBAL HITSS\Documentos\GitHub\cv_send\build\path_provider_android\intermediates\packaged_res\release
+com.example.cv_send.app-packaged_res-16 C:\Users\rojaswf\OneDrive - GLOBAL HITSS\Documentos\GitHub\cv_send\build\shared_preferences_android\intermediates\packaged_res\release
+com.example.cv_send.app-packaged_res-17 C:\Users\rojaswf\OneDrive - GLOBAL HITSS\Documentos\GitHub\cv_send\build\url_launcher_android\intermediates\packaged_res\release

@@ -48,11 +48,15 @@ class InitProyectUiValues {
   static const String yuGiOhGif = 'assets/gif/yugioh.gif';
   static const String yuGiOhJpg = 'assets/images/yugioh.jpg';
   static const String protiendasGif = 'assets/gif/protiendas.gif';
+  static const String breedcatGif = 'assets/gif/breedcat.gif';
   static const String yuGiOhTitle = "Yu Gi Oh!";
   static const String proTiendasTitle = "Protiendas!";
-  static const String proTiendasSubTitle =
-      'MarketPlace de productos masivos';
-      static const String aplicacionMvpMarketPlace =
+  static const String breedsCat = "Breeds cat!";
+  static const String breedsCatSubTitle =
+      'Codigo donde se organiza una vista de inicio y detalle, usando la APi de thecatapi, tiene buscador';
+  static const String proTiendasSubTitle = 'MarketPlace de productos masivos';
+  static const String aplicacionBreedCat = "Aplicacion con Clean Architecture, Dio, Bloc, Dependencias separadas en packages y llamadas desde el Main principal";
+  static const String aplicacionMvpMarketPlace =
       "MVP MarketPlace, esta en fase beta de desarrollo, con el fin de mostrar el MVP de una aplicacion de MarketPlace, hecha con flutter y BLOC como manejador de estado";
 
   static const String yuGiOhSubTitle =

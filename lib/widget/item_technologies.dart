@@ -1,36 +1,30 @@
-
 import 'package:cv_send/utils/colors.dart';
+import 'package:cv_send/utils/spacing.dart';
 import 'package:cv_send/utils/text/text.dart';
-import 'package:cv_send/utils/xigo_ui.dart';
 import 'package:flutter/material.dart';
 
 class ItemTechnologies extends StatelessWidget {
-  const ItemTechnologies({
-    super.key,
-    required this.technologies,
-  });
+  const ItemTechnologies({super.key, required this.technologies});
   final String technologies;
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: Container(
-        margin: const EdgeInsets.all(
-          InitProyectUiValues.spacingXs,
+    return Container(
+      margin: const EdgeInsets.only(bottom: CvSpacing.sm),
+      padding: const EdgeInsets.symmetric(
+        vertical: CvSpacing.xxs,
+        horizontal: CvSpacing.sl,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(CvSpacing.xxs),
+        color: XigoColors.azureishWhite,
+        border: Border.all(
+          color: XigoColors.azureishWhite.withValues(alpha: 0.5),
         ),
-        padding: const EdgeInsets.all(
-          InitProyectUiValues.spacingXs,
-        ),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(
-            10.0,
-          ), // All corners rounded with 10 radius
-          color: Colors.blue,
-        ),
-        child: XigoText.labelText(
-          label: technologies,
-          color: XigoColors.textColor,
-          textOverflow: TextOverflow.ellipsis,
-        ),
+      ),
+      child: XigoText.labelText(
+        label: technologies,
+        color: XigoColors.containerSelected,
+        fontWeight: FontWeight.w500,
       ),
     );
   }

@@ -2,30 +2,21 @@ import 'package:cv_send/_childrens/home/_childrens/info/bloc/bloc.dart';
 import 'package:cv_send/_childrens/home/_childrens/repository.dart';
 import 'package:flutter/material.dart';
 import 'package:cv_send/config/module.dart';
+import 'package:cv_send/config/app.dart';
 import 'package:cv_send/utils/http/http_client.dart';
-import 'package:cv_send/utils/preferences.dart';
 
 class AppModule extends Module {
   @override
-  List<Bind> get binds {
-    return [
-      Bind((i) => Preferences()),
-      Bind<XigoHttpClient>(
-        (i) => XigoHttpClient().getInstance(),
-      ),
-      Bind.lazySingleton(
-        (i) => BlocInfo(
-          repository: Repository(),
-        ),
-      ),
-      Bind((i) => GlobalKey<NavigatorState>()),
-    ];
+  void binds(Injector i) {
+    i.addSingleton<XigoHttpClient>(() {
+      return XigoHttpClient().getInstance();
+    });
+    i.addLazySingleton((i) => BlocInfo(repository: Repository()));
+    i.addSingleton<GlobalKey<NavigatorState>>(() => App.instance.navigatorKey);
   }
 
   @override
-  List<ModularRoute> get routes {
-    return [
-      ModuleRoute('/', module: GlobalModule()),
-    ];
+  void routes(RouteManager r) {
+    r.module('/', module: GlobalModule());
   }
 }

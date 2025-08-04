@@ -10,19 +10,19 @@ abstract class State extends Equatable {
 }
 
 class InitialState extends State {
-  const InitialState(Model model) : super(model);
+  const InitialState(super.model);
 }
 
 class UnLoggedState extends State {
-  const UnLoggedState(Model model) : super(model);
+  const UnLoggedState(super.model);
 }
 
 class LoadedState extends State {
-  const LoadedState(Model model) : super(model);
+  const LoadedState(super.model);
 }
 
 class ErrorState extends State {
-  const ErrorState(Model model) : super(model);
+  const ErrorState(super.model);
 }
 
 class Model extends Equatable {

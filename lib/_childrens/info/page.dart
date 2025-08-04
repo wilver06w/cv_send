@@ -31,17 +31,17 @@ class Page extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: BlocProvider(
-        create: (context) => BlocInfo(
-          repository: Repository(),
-        )
+        create: (context) => BlocInfo(repository: Repository())
           ..add(GetExperiencesEvent())
           ..add(GetProjectsEvent()),
         child: ListView(
           padding: EdgeInsets.symmetric(
-            vertical:
-                size.height > 1400 ? size.height * 0.2 : size.height * 0.1,
-            horizontal:
-                size.width > 1300 ? size.width * 0.28 : size.width * 0.07,
+            vertical: size.height > 1400
+                ? size.height * 0.2
+                : size.height * 0.1,
+            horizontal: size.width > 1300
+                ? size.width * 0.28
+                : size.width * 0.07,
           ),
           children: [
             const Header(),
@@ -112,21 +112,16 @@ class Page extends StatelessWidget {
             BlocBuilder<BlocInfo, InfoState>(
               builder: (context, state) {
                 return Wrap(
-                  children: List.generate(
-                    state.model.skills.length,
-                    (index) {
-                      final item = state.model.skills[index];
-                      return Wrap(
-                        spacing: CvSpacing.sm,
-                        children: [
-                          ContainerItem(
-                            title: item,
-                          ),
-                          const Gap(CvSpacing.sl),
-                        ],
-                      );
-                    },
-                  ),
+                  children: List.generate(state.model.skills.length, (index) {
+                    final item = state.model.skills[index];
+                    return Wrap(
+                      spacing: CvSpacing.sm,
+                      children: [
+                        ContainerItem(title: item),
+                        const Gap(CvSpacing.sl),
+                      ],
+                    );
+                  }),
                 );
               },
             ),
@@ -141,44 +136,41 @@ class Page extends StatelessWidget {
               builder: (context, state) {
                 return Wrap(
                   spacing: CvSpacing.xs,
-                  children: List.generate(
-                    state.model.projects.length,
-                    (index) {
-                      final project = state.model.projects[index];
-                      return Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          XigoText.body(
-                            label: project.title,
-                            textStyle: GoogleFonts.lato(),
-                          ),
-                          const Gap(CvSpacing.xs),
-                          project.routeGif.isEmpty
-                              ? InkWell(
-                                  onTap: () {
-                                    XigoRoute.navProject(itemProject: project);
-                                  },
-                                  child: Image.asset(
-                                    project.routeImage,
-                                    height: 200,
-                                    width: 200,
-                                  ),
-                                )
-                              : InkWell(
-                                  onTap: () {
-                                    XigoRoute.navProject(itemProject: project);
-                                  },
-                                  child: GifView.asset(
-                                    project.routeGif,
-                                    height: 200,
-                                    width: 200,
-                                    frameRate: 30,
-                                  ),
+                  children: List.generate(state.model.projects.length, (index) {
+                    final project = state.model.projects[index];
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        XigoText.body(
+                          label: project.title,
+                          textStyle: GoogleFonts.lato(),
+                        ),
+                        const Gap(CvSpacing.xs),
+                        project.routeGif.isEmpty
+                            ? InkWell(
+                                onTap: () {
+                                  XigoRoute.navProject(itemProject: project);
+                                },
+                                child: Image.asset(
+                                  project.routeImage,
+                                  height: 200,
+                                  width: 200,
                                 ),
-                        ],
-                      );
-                    },
-                  ),
+                              )
+                            : InkWell(
+                                onTap: () {
+                                  XigoRoute.navProject(itemProject: project);
+                                },
+                                child: GifView.asset(
+                                  project.routeGif,
+                                  height: 200,
+                                  width: 200,
+                                  frameRate: 30,
+                                ),
+                              ),
+                      ],
+                    );
+                  }),
                 );
               },
             ),

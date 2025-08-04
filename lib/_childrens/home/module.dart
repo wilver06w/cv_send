@@ -4,35 +4,31 @@ import 'package:cv_send/_childrens/home/_childrens/detail_project/page.dart'
 import 'package:cv_send/_childrens/home/_childrens/info/page.dart' as info;
 
 import 'package:cv_send/utils/http/http_client.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 class HomeModule extends Module {
   @override
-  List<Bind> get binds {
-    return [];
-  }
+  void binds(Injector i) {}
 
   @override
-  List<ModularRoute> get routes {
-    return [
-      ChildRoute(
-        Modular.initialRoute,
-        child: (_, args) => const page.Page(),
-        transition: TransitionType.fadeIn,
-      ),
-      ChildRoute(
-        '/info',
-        child: (_, args) => info.Page(
-          pass: (args.data ?? {})['pass_number'] ?? 0,
-        ),
-        transition: TransitionType.fadeIn,
-      ),
-      ChildRoute(
-        '/project',
-        child: (_, args) => detail_project.Page(
-          itemProject: (args.data ?? {})['project'] ?? 0,
-        ),
-        transition: TransitionType.fadeIn,
-      ),
-    ];
+  void routes(RouteManager r) {
+    r.child(
+      Modular.initialRoute,
+
+      child: (context) => const page.Page(),
+      transition: TransitionType.fadeIn,
+    );
+    r.child(
+      '/info',
+      child: (context) =>
+          info.Page(pass: (r.args.data ?? {})['pass_number'] ?? 0),
+      transition: TransitionType.fadeIn,
+    );
+    r.child(
+      '/project',
+      child: (context) =>
+          detail_project.Page(itemProject: (r.args.data ?? {})['project'] ?? 0),
+      transition: TransitionType.fadeIn,
+    );
   }
 }

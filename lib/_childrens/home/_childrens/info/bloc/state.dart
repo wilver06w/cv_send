@@ -9,19 +9,19 @@ abstract class InfoState extends Equatable {
 }
 
 class InitialState extends InfoState {
-  const InitialState(Model model) : super(model);
+  const InitialState(super.model);
 }
 
 class ChangedOptionSelected extends InfoState {
-  const ChangedOptionSelected(Model model) : super(model);
+  const ChangedOptionSelected(super.model);
 }
 
 class GetExperiencesState extends InfoState {
-  const GetExperiencesState(Model model) : super(model);
+  const GetExperiencesState(super.model);
 }
 
 class GetProjectsState extends InfoState {
-  const GetProjectsState(Model model) : super(model);
+  const GetProjectsState(super.model);
 }
 
 class Model extends Equatable {
@@ -41,6 +41,20 @@ class Model extends Equatable {
       'GitHub',
       'GitLab',
       'OpenAi',
+      'AWS',
+      'Kubernetes',
+      'Microservices',
+      'REST APIs',
+      'Docker',
+      'CI/CD',
+      'PostgreSQL',
+      'MySQL',
+      'MongoDB',
+      'Spring Boot',
+      'Laravel',
+      'PHP',
+      'JavaScript',
+      'React',
     ],
   });
 
@@ -65,11 +79,6 @@ class Model extends Equatable {
 
   @override
   List<Object?> get props {
-    return [
-      optionSelected,
-      experiences,
-      projects,
-      skills,
-    ];
+    return [optionSelected, experiences, projects, skills];
   }
 }

@@ -28,21 +28,16 @@ class ItemExperience extends StatelessWidget {
                   isSubtitle: true,
                   textTile: title,
                   onTap: () {
-                    Functions.launchInBrowser(
-                      url: urlSite,
-                    );
+                    if (urlSite.isNotEmpty) {
+                      Functions.launchInBrowser(url: urlSite);
+                    }
                   },
                 ),
                 const Gap(CvSpacing.md),
-                const ContainerItem(
-                  title: 'Remote',
-                ),
+                const ContainerItem(title: 'Remote'),
               ],
             ),
-            XigoText.small(
-              label: date,
-              textStyle: GoogleFonts.robotoMono(),
-            ),
+            XigoText.small(label: date, textStyle: GoogleFonts.robotoMono()),
           ],
         ),
         const Gap(CvSpacing.md),

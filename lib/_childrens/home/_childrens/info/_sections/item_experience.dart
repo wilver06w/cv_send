@@ -32,13 +32,8 @@ class ItemExperienceWidget extends StatelessWidget {
                   color: XigoColors.textColor,
                   fontWeight: FontWeight.bold,
                 ),
-                const SizedBox(
-                  width: InitProyectUiValues.spacingXs,
-                ),
-                XigoText.small(
-                  label: profile,
-                  color: XigoColors.textColor,
-                ),
+                const SizedBox(width: InitProyectUiValues.spacingXs),
+                XigoText.small(label: profile, color: XigoColors.textColor),
               ],
             ),
             XigoText.labelText(

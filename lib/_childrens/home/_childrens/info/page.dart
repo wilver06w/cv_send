@@ -20,182 +20,193 @@ part 'package:cv_send/_childrens/home/_childrens/info/_sections/project_widget.d
 final GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey();
 
 class Page extends StatelessWidget {
-  const Page({
-    super.key,
-    required this.pass,
-  });
+  const Page({super.key, required this.pass});
 
   final int pass;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return BlocProvider(
-      create: (context) => BlocInfo(
-        repository: Repository(),
-      )
+      create: (context) => BlocInfo(repository: Repository())
         ..add(GetExperiencesEvent())
         ..add(GetProjectsEvent())
         ..add(ChangedOptionSelectedEvent(optionSelected: pass)),
-      child: Scaffold(
-        key: _scaffoldkey,
-        backgroundColor: XigoColors.backgroundColor,
-        drawer: const GlobalDrawer(),
-        body: Padding(
-          padding: const EdgeInsets.all(InitProyectUiValues.spacingMedium),
-          child: ListView(
-            children: [
-              const SizedBox(height: InitProyectUiValues.spacingMedium),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const SizedBox.shrink(),
-                  size.width < 650
-                      ? InkWell(
-                          onTap: () {
-                            _scaffoldkey.currentState?.openDrawer();
-                          },
-                          child: Container(
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.5),
-                                  blurRadius: 5.0,
-                                  spreadRadius: 2.0,
-                                ),
-                              ],
+      child: PopScope(
+        canPop: true,
+        onPopInvokedWithResult: (didPop, result) async {},
+        child: Scaffold(
+          key: _scaffoldkey,
+          backgroundColor: XigoColors.backgroundColor,
+          drawer: const GlobalDrawer(),
+          body: Padding(
+            padding: const EdgeInsets.all(InitProyectUiValues.spacingMedium),
+            child: ListView(
+              children: [
+                const SizedBox(height: InitProyectUiValues.spacingMedium),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const SizedBox.shrink(),
+                    size.width < 650
+                        ? InkWell(
+                            onTap: () {
+                              _scaffoldkey.currentState?.openDrawer();
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withValues(alpha: 0.5),
+                                    blurRadius: 5.0,
+                                    spreadRadius: 2.0,
+                                  ),
+                                ],
+                              ),
+                              child: const Icon(
+                                Icons.menu_rounded,
+                                color: Colors.white,
+                              ),
                             ),
-                            child: const Icon(
-                              Icons.menu_rounded,
-                              color: Colors.white,
-                            ),
+                          )
+                        : BlocSelector<BlocInfo, InfoState, int>(
+                            selector: (state) {
+                              return state.model.optionSelected;
+                            },
+                            builder: (context, value) {
+                              return Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  if (value != 0) ...[
+                                    OptionTitle(
+                                      title: InitProyectUiValues.about,
+                                      onTap: () {
+                                        context.read<BlocInfo>().add(
+                                          const ChangedOptionSelectedEvent(
+                                            optionSelected: 0,
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                    const SizedBox(
+                                      width: InitProyectUiValues.spacingMedium,
+                                    ),
+                                  ],
+                                  if (value != 1) ...[
+                                    OptionTitle(
+                                      title: InitProyectUiValues.project,
+                                      onTap: () {
+                                        context.read<BlocInfo>().add(
+                                          const ChangedOptionSelectedEvent(
+                                            optionSelected: 1,
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                    const SizedBox(
+                                      width: InitProyectUiValues.spacingMedium,
+                                    ),
+                                  ],
+                                  if (value != 2) ...[
+                                    OptionTitle(
+                                      title: InitProyectUiValues.contact,
+                                      onTap: () {
+                                        context.read<BlocInfo>().add(
+                                          const ChangedOptionSelectedEvent(
+                                            optionSelected: 2,
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                    const SizedBox(
+                                      width: InitProyectUiValues.spacingMedium,
+                                    ),
+                                  ],
+                                  const Icon(
+                                    Icons.ads_click_sharp,
+                                    color: Colors.white,
+                                  ),
+                                ],
+                              );
+                            },
                           ),
-                        )
-                      : BlocSelector<BlocInfo, InfoState, int>(
-                          selector: (state) {
-                            return state.model.optionSelected;
-                          },
-                          builder: (context, value) {
-                            return Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  ],
+                ),
+                const SizedBox(height: InitProyectUiValues.spacingMedium),
+                Padding(
+                  padding: EdgeInsets.all(
+                    size.width < 650
+                        ? InitProyectUiValues.spacingMedium
+                        : InitProyectUiValues.spacingXl * 2,
+                  ),
+                  child: BlocListener<BlocInfo, InfoState>(
+                    listener: (context, state) {
+                      // Asegurar que el estado se mantenga consistente
+                      if (state.model.projects.isEmpty &&
+                          state.model.optionSelected == 1) {
+                        // Recargar proyectos si están vacíos y estamos en la sección de proyectos
+                        context.read<BlocInfo>().add(GetProjectsEvent());
+                      }
+                    },
+                    child: BlocSelector<BlocInfo, InfoState, int>(
+                      selector: (state) {
+                        return state.model.optionSelected;
+                      },
+                      builder: (context, value) {
+                        switch (value) {
+                          case 0:
+                            return const AboutMeWidget();
+                          case 1:
+                            return const ProjectWidget();
+                          case 2:
+                            return Column(
                               children: [
-                                if (value != 0) ...[
-                                  OptionTitle(
-                                    title: InitProyectUiValues.about,
-                                    onTap: () {
-                                      context.read<BlocInfo>().add(
-                                            const ChangedOptionSelectedEvent(
-                                              optionSelected: 0,
-                                            ),
+                                XigoText.title(
+                                  label: InitProyectUiValues.writeCallMe,
+                                  color: XigoColors.textColor,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Flexible(
+                                      child: InkWell(
+                                        onTap: () {
+                                          Functions.launchInBrowser(
+                                            url: InitProyectUiValues.wasapMe,
                                           );
-                                    },
-                                  ),
-                                  const SizedBox(
-                                    width: InitProyectUiValues.spacingMedium,
-                                  ),
-                                ],
-                                if (value != 1) ...[
-                                  OptionTitle(
-                                    title: InitProyectUiValues.project,
-                                    onTap: () {
-                                      context.read<BlocInfo>().add(
-                                            const ChangedOptionSelectedEvent(
-                                              optionSelected: 1,
-                                            ),
-                                          );
-                                    },
-                                  ),
-                                  const SizedBox(
-                                    width: InitProyectUiValues.spacingMedium,
-                                  ),
-                                ],
-                                if (value != 2) ...[
-                                  OptionTitle(
-                                    title: InitProyectUiValues.contact,
-                                    onTap: () {
-                                      context.read<BlocInfo>().add(
-                                            const ChangedOptionSelectedEvent(
-                                              optionSelected: 2,
-                                            ),
-                                          );
-                                    },
-                                  ),
-                                  const SizedBox(
-                                    width: InitProyectUiValues.spacingMedium,
-                                  ),
-                                ],
-                                const Icon(
-                                  Icons.ads_click_sharp,
-                                  color: Colors.white,
+                                        },
+                                        child: Lottie.asset(
+                                          InitProyectUiValues.wasapGif,
+                                          height: 200,
+                                        ),
+                                      ),
+                                    ),
+                                    Flexible(
+                                      child: InkWell(
+                                        onTap: () {
+                                          Functions.launchEmail();
+                                        },
+                                        child: Lottie.asset(
+                                          InitProyectUiValues.emailGif,
+                                          height: 200,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ],
                             );
-                          },
-                        ),
-                ],
-              ),
-              const SizedBox(height: InitProyectUiValues.spacingMedium),
-              Padding(
-                padding: EdgeInsets.all(
-                  size.width < 650
-                      ? InitProyectUiValues.spacingMedium
-                      : InitProyectUiValues.spacingXl * 2,
+                          default:
+                            return const SizedBox();
+                        }
+                      },
+                    ),
+                  ),
                 ),
-                child: BlocSelector<BlocInfo, InfoState, int>(
-                  selector: (state) {
-                    return state.model.optionSelected;
-                  },
-                  builder: (context, value) {
-                    switch (value) {
-                      case 0:
-                        return const AboutMeWidget();
-                      case 1:
-                        return const ProjectWidget();
-                      case 2:
-                        return Column(
-                          children: [
-                            XigoText.title(
-                              label: InitProyectUiValues.writeCallMe,
-                              color: XigoColors.textColor,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Flexible(
-                                  child: InkWell(
-                                    onTap: () {
-                                      Functions.launchInBrowser(
-                                        url: InitProyectUiValues.wasapMe,
-                                      );
-                                    },
-                                    child: Lottie.asset(
-                                      InitProyectUiValues.wasapGif,
-                                      height: 200,
-                                    ),
-                                  ),
-                                ),
-                                Flexible(
-                                  child: InkWell(
-                                    onTap: () {
-                                      Functions.launchEmail();
-                                    },
-                                    child: Lottie.asset(
-                                      InitProyectUiValues.emailGif,
-                                      height: 200,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        );
-                      default:
-                        return const SizedBox();
-                    }
-                  },
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -221,11 +232,7 @@ class IconTap extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      child: Lottie.asset(
-        iconRoute,
-        width: width,
-        height: height,
-      ),
+      child: Lottie.asset(iconRoute, width: width, height: height),
     );
   }
 }

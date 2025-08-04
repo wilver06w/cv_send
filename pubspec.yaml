@@ -5,44 +5,35 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.2.3 <4.0.0'
+  sdk: '3.8.1'
 dependencies:
   flutter:
     sdk: flutter
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  flutter_modular: ^5.0.3
-  bloc: ^8.1.2
-  flutter_bloc: ^8.1.3
-  google_fonts: ^6.1.0
-  intl: ^0.18.1
-  dio: ^5.4.0
-  dio_smart_retry: ^6.0.0
-  dio_cache_interceptor: ^3.5.0
-  package_info_plus: ^5.0.1
-  shared_preferences: ^2.2.2
-  equatable: ^2.0.5
-  flutter_svg: ^2.0.2
+  cupertino_icons: ^1.0.8
+  flutter_modular: ^6.4.1
+  bloc: ^9.0.0
+  flutter_bloc: ^9.1.1
+  google_fonts: ^6.3.0
+  intl: ^0.20.0
+  dio: ^5.8.0
+  dio_smart_retry: ^7.0.1
+  dio_cache_interceptor: ^4.0.3
+  equatable: ^2.0.7
+  flutter_svg: ^2.2.0
   dart_ipify: ^1.1.1
-  lottie: ^2.7.0
-  shimmer_animation: ^2.1.0+1
-  url_launcher: ^6.2.2
+  lottie: ^3.3.1
+  shimmer_animation: ^2.2.2
+  url_launcher: ^6.3.2
   timelines: ^0.1.0
-  animations: ^2.0.10
+  animations: ^2.0.11
   gif: ^2.3.0
-  gif_view: ^0.4.0
+  gif_view: ^1.0.3
   gap: ^3.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  flutter_lints: ^6.0.0
 
 flutter:
   uses-material-design: true

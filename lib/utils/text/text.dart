@@ -18,21 +18,20 @@ class XigoText {
     int? maxLines,
     TextStyle? textStyle,
     TextDecoration? decoration,
-  }) =>
-      _TextGeneric(
-        key: key,
-        label: label,
-        fontSize: XigoTypography.h1,
-        color: color ?? Colors.black,
-        fontStyle: FontStyle.normal,
-        fontWeight: fontWeight ?? FontWeight.normal,
-        textAlign: textAlign,
-        textOverflow: textOverflow,
-        letterSpacing: letterSpacing,
-        maxLines: maxLines,
-        textStyle: textStyle,
-        decoration: decoration,
-      );
+  }) => _TextGeneric(
+    key: key,
+    label: label,
+    fontSize: XigoTypography.h1,
+    color: color ?? Colors.black,
+    fontStyle: FontStyle.normal,
+    fontWeight: fontWeight ?? FontWeight.normal,
+    textAlign: textAlign,
+    textOverflow: textOverflow,
+    letterSpacing: letterSpacing,
+    maxLines: maxLines,
+    textStyle: textStyle,
+    decoration: decoration,
+  );
 
   ///h2 Text widget - fontSize 58
   static Widget h2({
@@ -46,21 +45,20 @@ class XigoText {
     int? maxLines,
     TextStyle? textStyle,
     TextDecoration? decoration,
-  }) =>
-      _TextGeneric(
-        key: key,
-        label: label,
-        fontSize: XigoTypography.h2,
-        color: color ?? Colors.black,
-        fontStyle: FontStyle.normal,
-        fontWeight: fontWeight ?? FontWeight.normal,
-        textAlign: textAlign,
-        textOverflow: textOverflow,
-        letterSpacing: letterSpacing,
-        maxLines: maxLines,
-        textStyle: textStyle,
-        decoration: decoration,
-      );
+  }) => _TextGeneric(
+    key: key,
+    label: label,
+    fontSize: XigoTypography.h2,
+    color: color ?? Colors.black,
+    fontStyle: FontStyle.normal,
+    fontWeight: fontWeight ?? FontWeight.normal,
+    textAlign: textAlign,
+    textOverflow: textOverflow,
+    letterSpacing: letterSpacing,
+    maxLines: maxLines,
+    textStyle: textStyle,
+    decoration: decoration,
+  );
 
   ///h3 Text widget - fontSize 47
   static Widget h3({
@@ -74,21 +72,20 @@ class XigoText {
     int? maxLines,
     TextStyle? textStyle,
     TextDecoration? decoration,
-  }) =>
-      _TextGeneric(
-        key: key,
-        label: label,
-        fontSize: XigoTypography.h3,
-        color: color ?? Colors.black,
-        fontStyle: FontStyle.normal,
-        fontWeight: fontWeight ?? FontWeight.normal,
-        textAlign: textAlign,
-        textOverflow: textOverflow,
-        letterSpacing: letterSpacing,
-        maxLines: maxLines,
-        textStyle: textStyle,
-        decoration: decoration,
-      );
+  }) => _TextGeneric(
+    key: key,
+    label: label,
+    fontSize: XigoTypography.h3,
+    color: color ?? Colors.black,
+    fontStyle: FontStyle.normal,
+    fontWeight: fontWeight ?? FontWeight.normal,
+    textAlign: textAlign,
+    textOverflow: textOverflow,
+    letterSpacing: letterSpacing,
+    maxLines: maxLines,
+    textStyle: textStyle,
+    decoration: decoration,
+  );
 
   ///h4 Text widget - fontSize 33
   static Widget h4({
@@ -102,20 +99,19 @@ class XigoText {
     int? maxLines,
     TextStyle? textStyle,
     TextDecoration? decoration,
-  }) =>
-      _TextGeneric(
-        key: key,
-        label: label,
-        fontSize: XigoTypography.h4,
-        fontStyle: FontStyle.normal,
-        fontWeight: fontWeight ?? FontWeight.normal,
-        textAlign: textAlign,
-        textOverflow: textOverflow,
-        letterSpacing: letterSpacing,
-        maxLines: maxLines,
-        textStyle: textStyle,
-        decoration: decoration,
-      );
+  }) => _TextGeneric(
+    key: key,
+    label: label,
+    fontSize: XigoTypography.h4,
+    fontStyle: FontStyle.normal,
+    fontWeight: fontWeight ?? FontWeight.normal,
+    textAlign: textAlign,
+    textOverflow: textOverflow,
+    letterSpacing: letterSpacing,
+    maxLines: maxLines,
+    textStyle: textStyle,
+    decoration: decoration,
+  );
 
   ///h5 Text widget - fontSize 23
   static Widget h5({
@@ -129,21 +125,20 @@ class XigoText {
     int? maxLines,
     TextStyle? textStyle,
     TextDecoration? decoration,
-  }) =>
-      _TextGeneric(
-        key: key,
-        label: label,
-        fontSize: XigoTypography.h5,
-        color: color ?? Colors.black,
-        fontStyle: FontStyle.normal,
-        fontWeight: fontWeight ?? FontWeight.normal,
-        textAlign: textAlign,
-        textOverflow: textOverflow,
-        letterSpacing: letterSpacing,
-        maxLines: maxLines,
-        textStyle: textStyle,
-        decoration: decoration,
-      );
+  }) => _TextGeneric(
+    key: key,
+    label: label,
+    fontSize: XigoTypography.h5,
+    color: color ?? Colors.black,
+    fontStyle: FontStyle.normal,
+    fontWeight: fontWeight ?? FontWeight.normal,
+    textAlign: textAlign,
+    textOverflow: textOverflow,
+    letterSpacing: letterSpacing,
+    maxLines: maxLines,
+    textStyle: textStyle,
+    decoration: decoration,
+  );
 
   ///h6 Text widget - fontSize 19
   static Widget h6({
@@ -157,21 +152,20 @@ class XigoText {
     int? maxLines,
     TextStyle? textStyle,
     TextDecoration? decoration,
-  }) =>
-      _TextGeneric(
-        key: key,
-        label: label,
-        fontSize: XigoTypography.h6,
-        color: color ?? Colors.black,
-        fontStyle: FontStyle.normal,
-        fontWeight: fontWeight ?? FontWeight.bold,
-        textAlign: textAlign,
-        textOverflow: textOverflow,
-        letterSpacing: letterSpacing,
-        maxLines: maxLines,
-        textStyle: textStyle,
-        decoration: decoration,
-      );
+  }) => _TextGeneric(
+    key: key,
+    label: label,
+    fontSize: XigoTypography.h6,
+    color: color ?? Colors.black,
+    fontStyle: FontStyle.normal,
+    fontWeight: fontWeight ?? FontWeight.bold,
+    textAlign: textAlign,
+    textOverflow: textOverflow,
+    letterSpacing: letterSpacing,
+    maxLines: maxLines,
+    textStyle: textStyle,
+    decoration: decoration,
+  );
 
   ///body Text widget - fontSize 16
   static Widget body({
@@ -185,21 +179,20 @@ class XigoText {
     double? letterSpacing,
     TextStyle? textStyle,
     TextDecoration? decoration,
-  }) =>
-      _TextGeneric(
-        key: key,
-        label: label,
-        fontSize: XigoTypography.body,
-        color: color ?? Colors.black,
-        fontStyle: FontStyle.normal,
-        fontWeight: fontWeight ?? FontWeight.normal,
-        textAlign: textAlign,
-        textOverflow: textOverflow,
-        maxLines: maxLines,
-        letterSpacing: letterSpacing,
-        textStyle: textStyle,
-        decoration: decoration,
-      );
+  }) => _TextGeneric(
+    key: key,
+    label: label,
+    fontSize: XigoTypography.body,
+    color: color ?? Colors.black,
+    fontStyle: FontStyle.normal,
+    fontWeight: fontWeight ?? FontWeight.normal,
+    textAlign: textAlign,
+    textOverflow: textOverflow,
+    maxLines: maxLines,
+    letterSpacing: letterSpacing,
+    textStyle: textStyle,
+    decoration: decoration,
+  );
 
   ///title Text widget - fontSize 18
   static Widget title({
@@ -212,20 +205,19 @@ class XigoText {
     int? maxLines,
     double? letterSpacing,
     TextStyle? textStyle,
-  }) =>
-      _TextGeneric(
-        key: key,
-        label: label,
-        fontSize: XigoTypography.title,
-        color: color ?? Colors.black,
-        fontStyle: FontStyle.normal,
-        fontWeight: fontWeight ?? FontWeight.normal,
-        textAlign: textAlign,
-        textOverflow: textOverflow,
-        maxLines: maxLines,
-        letterSpacing: letterSpacing,
-        textStyle: textStyle,
-      );
+  }) => _TextGeneric(
+    key: key,
+    label: label,
+    fontSize: XigoTypography.title,
+    color: color ?? Colors.black,
+    fontStyle: FontStyle.normal,
+    fontWeight: fontWeight ?? FontWeight.normal,
+    textAlign: textAlign,
+    textOverflow: textOverflow,
+    maxLines: maxLines,
+    letterSpacing: letterSpacing,
+    textStyle: textStyle,
+  );
 
   ///labelText Text widget - fontSize 14
   static Widget labelText({
@@ -239,21 +231,20 @@ class XigoText {
     double? letterSpacing,
     TextStyle? textStyle,
     TextDecoration? decoration,
-  }) =>
-      _TextGeneric(
-        key: key,
-        label: label,
-        fontSize: XigoTypography.label,
-        color: color ?? Colors.black,
-        fontStyle: FontStyle.normal,
-        fontWeight: fontWeight ?? FontWeight.normal,
-        textAlign: textAlign,
-        textOverflow: textOverflow,
-        maxLines: maxLines,
-        letterSpacing: letterSpacing,
-        textStyle: textStyle,
-        decoration: decoration,
-      );
+  }) => _TextGeneric(
+    key: key,
+    label: label,
+    fontSize: XigoTypography.label,
+    color: color ?? Colors.black,
+    fontStyle: FontStyle.normal,
+    fontWeight: fontWeight ?? FontWeight.normal,
+    textAlign: textAlign,
+    textOverflow: textOverflow,
+    maxLines: maxLines,
+    letterSpacing: letterSpacing,
+    textStyle: textStyle,
+    decoration: decoration,
+  );
 
   ///xSmall Text widget - fontSize 8
   static Widget xSmall({
@@ -267,21 +258,20 @@ class XigoText {
     double? letterSpacing,
     TextStyle? textStyle,
     TextDecoration? decoration,
-  }) =>
-      _TextGeneric(
-        key: key,
-        label: label,
-        fontSize: XigoTypography.xSmall,
-        color: color ?? Colors.black,
-        fontStyle: FontStyle.normal,
-        fontWeight: fontWeight ?? FontWeight.normal,
-        textAlign: textAlign,
-        textOverflow: textOverflow,
-        letterSpacing: letterSpacing,
-        maxLines: maxLines,
-        textStyle: textStyle,
-        decoration: decoration,
-      );
+  }) => _TextGeneric(
+    key: key,
+    label: label,
+    fontSize: XigoTypography.xSmall,
+    color: color ?? Colors.black,
+    fontStyle: FontStyle.normal,
+    fontWeight: fontWeight ?? FontWeight.normal,
+    textAlign: textAlign,
+    textOverflow: textOverflow,
+    letterSpacing: letterSpacing,
+    maxLines: maxLines,
+    textStyle: textStyle,
+    decoration: decoration,
+  );
 
   ///small Text widget - fontSize 12
   static Widget small({
@@ -295,21 +285,20 @@ class XigoText {
     double? letterSpacing,
     TextStyle? textStyle,
     TextDecoration? decoration,
-  }) =>
-      _TextGeneric(
-        key: key,
-        label: label,
-        fontSize: XigoTypography.small,
-        color: color ?? Colors.black,
-        fontStyle: FontStyle.normal,
-        fontWeight: fontWeight ?? FontWeight.normal,
-        textAlign: textAlign,
-        textOverflow: textOverflow,
-        maxLines: maxLines,
-        letterSpacing: letterSpacing,
-        textStyle: textStyle,
-        decoration: decoration,
-      );
+  }) => _TextGeneric(
+    key: key,
+    label: label,
+    fontSize: XigoTypography.small,
+    color: color ?? Colors.black,
+    fontStyle: FontStyle.normal,
+    fontWeight: fontWeight ?? FontWeight.normal,
+    textAlign: textAlign,
+    textOverflow: textOverflow,
+    maxLines: maxLines,
+    letterSpacing: letterSpacing,
+    textStyle: textStyle,
+    decoration: decoration,
+  );
 
   ///small Text widget - fontSize 12
   static Widget fontBold({
@@ -323,21 +312,20 @@ class XigoText {
     double? letterSpacing,
     TextStyle? textStyle,
     TextDecoration? decoration,
-  }) =>
-      _TextGeneric(
-        key: key,
-        label: label,
-        fontSize: XigoTypography.body,
-        color: color ?? Colors.black,
-        fontStyle: FontStyle.normal,
-        fontWeight: fontWeight ?? FontWeight.w600,
-        textAlign: textAlign,
-        textOverflow: textOverflow,
-        maxLines: maxLines,
-        letterSpacing: letterSpacing,
-        textStyle: textStyle,
-        decoration: decoration,
-      );
+  }) => _TextGeneric(
+    key: key,
+    label: label,
+    fontSize: XigoTypography.body,
+    color: color ?? Colors.black,
+    fontStyle: FontStyle.normal,
+    fontWeight: fontWeight ?? FontWeight.w600,
+    textAlign: textAlign,
+    textOverflow: textOverflow,
+    maxLines: maxLines,
+    letterSpacing: letterSpacing,
+    textStyle: textStyle,
+    decoration: decoration,
+  );
 
   ///full custom Text widget - fontSize custom
   static Widget fontSizeCustom({
@@ -353,21 +341,20 @@ class XigoText {
     int? maxLines,
     TextStyle? textStyle,
     TextDecoration? decoration,
-  }) =>
-      _TextGeneric(
-        key: key,
-        label: label,
-        fontSize: fontSize,
-        color: color ?? Colors.black,
-        fontStyle: fontStyle,
-        fontWeight: fontWeight ?? FontWeight.normal,
-        textAlign: textAlign,
-        textOverflow: textOverflow,
-        letterSpacing: letterSpacing,
-        maxLines: maxLines,
-        textStyle: textStyle,
-        decoration: decoration,
-      );
+  }) => _TextGeneric(
+    key: key,
+    label: label,
+    fontSize: fontSize,
+    color: color ?? Colors.black,
+    fontStyle: fontStyle,
+    fontWeight: fontWeight ?? FontWeight.normal,
+    textAlign: textAlign,
+    textOverflow: textOverflow,
+    letterSpacing: letterSpacing,
+    maxLines: maxLines,
+    textStyle: textStyle,
+    decoration: decoration,
+  );
 
   static TextStyle style({
     double? fontSize,
@@ -379,23 +366,22 @@ class XigoText {
     TextDecoration? decoration,
     double? lineHeight,
     List<Shadow>? shadows,
-  }) =>
-      TextStyle(
-        height: lineHeight,
-        fontFamily: XigoTypography.inter,
-        color: color,
-        fontSize: fontSize,
-        fontWeight: fontWeight,
-        fontStyle: fontStyle ?? FontStyle.normal,
-        letterSpacing: letterSpacing,
-        decoration: decoration ?? TextDecoration.none,
-        shadows: shadows,
-      ).merge(textStyle);
+  }) => TextStyle(
+    height: lineHeight,
+    fontFamily: XigoTypography.inter,
+    color: color,
+    fontSize: fontSize,
+    fontWeight: fontWeight,
+    fontStyle: fontStyle ?? FontStyle.normal,
+    letterSpacing: letterSpacing,
+    decoration: decoration ?? TextDecoration.none,
+    shadows: shadows,
+  ).merge(textStyle);
 }
 
 class _TextGeneric extends StatelessWidget {
   const _TextGeneric({
-    Key? key,
+    super.key,
     required this.label,
     required this.fontSize,
     this.color,
@@ -407,7 +393,7 @@ class _TextGeneric extends StatelessWidget {
     this.maxLines,
     this.textStyle,
     this.decoration,
-  }) : super(key: key);
+  });
 
   final String label;
   final double fontSize;

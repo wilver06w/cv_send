@@ -4,18 +4,16 @@ import 'package:flutter_modular/flutter_modular.dart';
 
 class GlobalModule extends Module {
   @override
-  final List<Bind> binds = [];
+  void binds(Injector i) {}
 
   @override
-  List<ModularRoute> get routes {
-    return [
-      ChildRoute(
-        Modular.initialRoute,
-        child: (_, args) => const info.Page(),
-        // child: (_, args) => const splash.Page(),
-        transition: TransitionType.fadeIn,
-      ),
-      ModuleRoute('/home', module: HomeModule()),
-    ];
+  void routes(RouteManager r) {
+    r.child(
+      Modular.initialRoute,
+      child: (context) => const info.Page(),
+      transition: TransitionType.fadeIn,
+    );
+
+    r.module('/home', module: HomeModule());
   }
 }

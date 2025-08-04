@@ -8,9 +8,6 @@ abstract class DetailProjectEvent extends Equatable {
 }
 
 class ChangedItemProjectEvent extends DetailProjectEvent {
+  const ChangedItemProjectEvent({required this.itemProject});
   final ItemProject itemProject;
-
-  const ChangedItemProjectEvent({
-    required this.itemProject,
-  });
 }

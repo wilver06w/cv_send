@@ -6,6 +6,48 @@ class Repository {
   List<ItemExperience> getExperiences() {
     return [
       const ItemExperience(
+        title: InitProyectUiValues.pragma,
+        profile: InitProyectUiValues.mobileDeveloper,
+        date: InitProyectUiValues.twentyFourJunPresent,
+        descriptionSpanish:
+            'Desarrollador móvil y backend, encargado de despliegues en AWS, Kubernetes y microservicios, aportando también desde lo funcional en las definiciones.',
+        description:
+            'Mobile and backend developer, in charge of AWS deployments, Kubernetes and microservices, also contributing functionally in definitions.',
+        resposabilitys: [
+          'Desarrollo móvil iOS y Android con Flutter y tecnologías nativas.',
+          'Desarrollo backend con microservicios y APIs REST.',
+          'Despliegues en AWS utilizando servicios cloud.',
+          'Gestión de contenedores con Kubernetes (kubectl).',
+          'Arquitectura de microservicios y comunicación entre servicios.',
+          'Aporte funcional en definiciones de requerimientos y arquitectura.',
+          'Integración continua y despliegue continuo (CI/CD).',
+          'Monitoreo y mantenimiento de aplicaciones en producción.',
+          'Trabajo en equipo con metodologías ágiles.',
+          'Optimización de rendimiento y escalabilidad.',
+        ],
+        urlSite: '',
+      ),
+      const ItemExperience(
+        title: InitProyectUiValues.globalHitts,
+        profile: InitProyectUiValues.mobileDeveloper,
+        date: InitProyectUiValues.twentyFourFebJun,
+        descriptionSpanish:
+            'Desarrollador móvil en outsourcing para EPM, encargado del desarrollo y mantenimiento de 5 aplicaciones móviles en fase de empalme.',
+        description:
+            'Mobile developer in outsourcing for EPM, in charge of development and maintenance of 5 mobile applications in handover phase.',
+        resposabilitys: [
+          'Desarrollo y mantenimiento de aplicaciones móviles iOS y Android.',
+          'Aplicaciones desarrolladas: Mi Bitácora, Talleres, Proveeduría, Alertas Hidroituango.',
+          'Fase de empalme: Recibimiento y desarrollo de aplicaciones existentes.',
+          'Tecnologías: Flutter, Dart, iOS, Android.',
+          'Metodología ágil y trabajo en equipo.',
+          'Integración con APIs y servicios backend.',
+          'Mantenimiento de código legacy y nuevas funcionalidades.',
+          'Testing y debugging de aplicaciones móviles.',
+        ],
+        urlSite: '',
+      ),
+      const ItemExperience(
         title: InitProyectUiValues.tulSas,
         profile: InitProyectUiValues.mobileDeveloper,
         date: InitProyectUiValues.twentyOneTwentyThree,
@@ -14,20 +56,20 @@ class Repository {
         description:
             'I was in charge of the Core of the business, including authentication, home profile, services, developing functionalities from 0%',
         resposabilitys: [
-          'Scrum methodology, establishment of OKR objectives.',
-          'Version control: Git, BitBucket.',
-          '	State management: BLOC, Riverpod, Provider.',
-          '	Design and collaboration: Figma, Slack.',
-          '	Cross-platform frameworks: Dart: Flutter 3.',
-          '	Native platforms: iOS and Android.',
-          '	Firebase integration: Firebase Analytics, remote configuration.',
-          '	Google Maps integration: maps, GPS.',
-          '	Database Management: PostgreSQL, DBeaver.',
-          '	Data visualization: Redash.',
-          '	API Documentation: Swagger.',
-          '	Clean code principles: SOLID.',
-          '	Clean architecture: modular and maintainable code.',
-          '	Unit and integration tests: guarantee the functionality of the code.',
+          'Metodología Scrum, establecimiento de objetivos OKR.',
+          'Control de versiones: Git, BitBucket.',
+          'Gestión de estado: BLOC, Riverpod, Provider.',
+          'Diseño y colaboración: Figma, Slack.',
+          'Frameworks multiplataforma: Dart: Flutter 3.',
+          'Plataformas nativas: iOS y Android.',
+          'Integración Firebase: Firebase Analytics, configuración remota.',
+          'Integración Google Maps: mapas, GPS.',
+          'Gestión de bases de datos: PostgreSQL, DBeaver.',
+          'Visualización de datos: Redash.',
+          'Documentación de API: Swagger.',
+          'Principios de código limpio: SOLID.',
+          'Arquitectura limpia: código modular y mantenible.',
+          'Pruebas unitarias e integración: garantizar la funcionalidad del código.',
         ],
         urlSite:
             'https://play.google.com/store/apps/details?id=co.com.tul.ironmonger',
@@ -41,15 +83,15 @@ class Repository {
         description:
             'This was an ecommerce, here I played the role of leader, defining the technology and communicating with the product part to download the requirements and designs.',
         resposabilitys: [
-          'Development of the Acacompro.com platform',
-          'Use of the Dart programming language.',
-          'Consumption of RESTful APIs',
-          'Use of integrations with different payment gateways.',
-          'Use of databases such as: Mysql and MongoDB.',
-          'Connecting to the Facebook SDK, to Login and obtain the user data.',
+          'Desarrollo de la plataforma Acacompro.com',
+          'Uso del lenguaje de programación Dart.',
+          'Consumo de APIs RESTful',
+          'Uso de integraciones con diferentes pasarelas de pago.',
+          'Uso de bases de datos como: Mysql y MongoDB.',
+          'Conexión al SDK de Facebook, para Login y obtener los datos del usuario.',
           'Firebase Analytics.',
-          'Push Notifications in Firebase.',
-          'Applying Flutter Static Analysis.',
+          'Notificaciones Push en Firebase.',
+          'Aplicación de Análisis Estático de Flutter.',
         ],
         urlSite:
             'https://play.google.com/store/apps/details?id=com.acacompro.acacompro',
@@ -63,10 +105,10 @@ class Repository {
         description:
             'This project is a transportation app, for taxi and motorcycle services, here I contributed in 3 applications in total, it was present in Bogota, and small cities.',
         resposabilitys: [
-          'Development of the XiGo platform',
-          'Use of integrations with different payment gateways.',
-          'Use of databases such as: Mysql and MongoDB.',
-          'Use of Frameworks such as: Codeigniter, Creating REST APIs.',
+          'Desarrollo de la plataforma XiGo',
+          'Uso de integraciones con diferentes pasarelas de pago.',
+          'Uso de bases de datos como: Mysql y MongoDB.',
+          'Uso de Frameworks como: Codeigniter, Creación de APIs REST.',
         ],
         urlSite:
             'https://play.google.com/store/apps/details?id=com.motaxisas.motaxigo',
@@ -80,9 +122,9 @@ class Repository {
         description:
             'Software developer on e-commerce platforms such as Vitrisur being sponsored by the chamber of commerce (https://vitrisur.com). with mobile application.',
         resposabilitys: [
-          'Use of Frameworks such as: Codeigniter, Creating REST APIs.',
-          'Use of databases such as: Mysql and MongoDB.',
-          'Creation app',
+          'Uso de Frameworks como: Codeigniter, Creación de APIs REST.',
+          'Uso de bases de datos como: Mysql y MongoDB.',
+          'Creación de aplicación',
         ],
         urlSite: 'https://vitrisur.com/',
       ),
@@ -95,10 +137,10 @@ class Repository {
         description:
             'This is an entertainment and news App about a soccer team, Implement the designs and what is required',
         resposabilitys: [
-          'Development of the XiGo platform',
-          'Use of integrations with different payment gateways.',
-          'Use of databases such as: Mysql and MongoDB.',
-          'Use of Frameworks such as: Codeigniter, Creating REST APIs.',
+          'Desarrollo de la plataforma XiGo',
+          'Uso de integraciones con diferentes pasarelas de pago.',
+          'Uso de bases de datos como: Mysql y MongoDB.',
+          'Uso de Frameworks como: Codeigniter, Creación de APIs REST.',
         ],
         urlSite:
             'https://play.google.com/store/apps/details?id=com.wfprogramador.somosjuniors',
@@ -143,20 +185,14 @@ class Repository {
           'Inyeccion de dependencias',
           'Navigator',
         ],
-        routeGif:  InitProyectUiValues.breedcatGif,
+        routeGif: InitProyectUiValues.breedcatGif,
         urlSite: 'https://github.com/wilver06w/breeds',
       ),
       const ItemProject(
         title: InitProyectUiValues.yuGiOhTitle,
         subtitle: InitProyectUiValues.yuGiOhSubTitle,
         about: InitProyectUiValues.yuGiOhDesc,
-        technologies: [
-          'Flutter',
-          'Bloc',
-          'Dart',
-          'Kotlin',
-          'Modular',
-        ],
+        technologies: ['Flutter', 'Bloc', 'Dart', 'Kotlin', 'Modular'],
         routeImage: InitProyectUiValues.yuGiOhJpg,
         urlSite: 'https://github.com/wilver06w/yugioh',
       ),
@@ -180,13 +216,7 @@ class Repository {
         title: InitProyectUiValues.verifik,
         subtitle: InitProyectUiValues.verifikTitle,
         about: InitProyectUiValues.verifikDesc,
-        technologies: [
-          'Flutter',
-          'Bloc',
-          'Dart',
-          'Kotlin',
-          'Modular',
-        ],
+        technologies: ['Flutter', 'Bloc', 'Dart', 'Kotlin', 'Modular'],
         routeImage: InitProyectUiValues.verifikPng,
         urlSite: 'https://github.com/wilver06w/verifik',
       ),
@@ -210,37 +240,27 @@ class Repository {
       ),
       const ItemProject(
         title: 'Acacompro',
-        subtitle: 'MarketPlace of products',
-        about: 'MarketPlace of products, style Mercadolibre',
-        technologies: [
-          'Flutter',
-          'Provider',
-          'Dart',
-          'Laravel',
-        ],
+        subtitle: 'MarketPlace de productos',
+        about: 'MarketPlace de productos, estilo Mercadolibre',
+        technologies: ['Flutter', 'Provider', 'Dart', 'Laravel'],
         routeGif: InitProyectUiValues.acacomproGif,
         urlSite:
             'https://play.google.com/store/apps/details?id=com.acacompro.acacompro',
       ),
       const ItemProject(
         title: 'Acacompro Proveedores',
-        subtitle: 'MarketPlace of products for clients interns',
-        about: 'MarketPlace of products for providers, ty business B2B',
-        technologies: [
-          'Flutter',
-          'Provider',
-          'Dart',
-          'Laravel',
-        ],
+        subtitle: 'MarketPlace de productos para clientes internos',
+        about: 'MarketPlace de productos para proveedores, tipo negocio B2B',
+        technologies: ['Flutter', 'Provider', 'Dart', 'Laravel'],
         routeImage: InitProyectUiValues.acacomproProveedoresImage,
         urlSite:
             'https://play.google.com/store/apps/details?id=com.acacompro.proveedores',
       ),
       const ItemProject(
         title: 'XigoCliente',
-        subtitle: 'Transport application',
+        subtitle: 'Aplicación de transporte',
         about:
-            'Faster in each city and locate the city effectively #Colombia #Mexico',
+            'Más rápido en cada ciudad y localizar la ciudad efectivamente #Colombia #Mexico',
         technologies: [
           'Java',
           'Kotlin',
@@ -255,32 +275,20 @@ class Repository {
       ),
       const ItemProject(
         title: 'XigoConductor',
-        subtitle: 'Transport application',
+        subtitle: 'Aplicación de transporte',
         about:
-            'Complementary application, which is used to manage the services that come out from the Client App',
-        technologies: [
-          'Java - Kotlin',
-          'Retrofit',
-          'MVVM',
-          'Dart',
-          'Laravel',
-        ],
+            'Aplicación complementaria, que se utiliza para gestionar los servicios que salen de la App Cliente',
+        technologies: ['Java - Kotlin', 'Retrofit', 'MVVM', 'Dart', 'Laravel'],
         routeGif: InitProyectUiValues.xigoConductor,
         urlSite:
             'https://play.google.com/store/apps/details?id=com.motaxisas.motaxigoconductor',
       ),
       const ItemProject(
         title: 'Somos Junior',
-        subtitle: 'Transport application',
+        subtitle: 'Aplicación de entretenimiento',
         about:
-            'This is an entertainment and news App about a soccer team, Implement the designs and what is required',
-        technologies: [
-          'Java',
-          'RxJava',
-          'Retrofit',
-          'MVC',
-          'Laravel',
-        ],
+            'Esta es una App de entretenimiento y noticias sobre un equipo de fútbol, Implementa los diseños y lo que se requiere',
+        technologies: ['Java', 'RxJava', 'Retrofit', 'MVC', 'Laravel'],
         routeImage: InitProyectUiValues.somosjuniorGif,
         urlSite:
             'https://play.google.com/store/apps/details?id=com.wfprogramador.somosjuniors',

@@ -9,11 +9,11 @@ abstract class DetailProjectState extends Equatable {
 }
 
 class InitialState extends DetailProjectState {
-  const InitialState(Model model) : super(model);
+  const InitialState(super.model);
 }
 
 class ChangedItemProjectState extends DetailProjectState {
-  const ChangedItemProjectState(Model model) : super(model);
+  const ChangedItemProjectState(super.model);
 }
 
 class Model extends Equatable {

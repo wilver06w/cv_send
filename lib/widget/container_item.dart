@@ -4,10 +4,7 @@ import 'package:cv_send/utils/text/text.dart';
 import 'package:flutter/material.dart';
 
 class ContainerItem extends StatelessWidget {
-  const ContainerItem({
-    super.key,
-    required this.title,
-  });
+  const ContainerItem({super.key, required this.title});
   final String title;
 
   @override
@@ -22,9 +19,7 @@ class ContainerItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(CvSpacing.xxs),
         color: XigoColors.azureishWhite,
         border: Border.all(
-          color: XigoColors.azureishWhite.withOpacity(
-            0.5,
-          ),
+          color: XigoColors.azureishWhite.withValues(alpha: 0.5),
         ),
       ),
       child: XigoText.labelText(

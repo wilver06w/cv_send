@@ -9,9 +9,7 @@ part 'event.dart';
 part 'state.dart';
 
 class BlocInfo extends Bloc<InfoEvent, InfoState> {
-  BlocInfo({
-    required this.repository,
-  }) : super(const InitialState(Model())) {
+  BlocInfo({required this.repository}) : super(const InitialState(Model())) {
     on<ChangedOptionSelectedEvent>(_onChangedOptionSelectedEvent);
     on<GetExperiencesEvent>(_onGetExperiencesEvent);
     on<GetProjectsEvent>(_onGetProjectsEvent);
@@ -23,11 +21,10 @@ class BlocInfo extends Bloc<InfoEvent, InfoState> {
     ChangedOptionSelectedEvent event,
     Emitter<InfoState> emit,
   ) {
+    // Preservar los datos existentes al cambiar la opción seleccionada
     emit(
       ChangedOptionSelected(
-        state.model.copyWith(
-          optionSelected: event.optionSelected,
-        ),
+        state.model.copyWith(optionSelected: event.optionSelected),
       ),
     );
   }
@@ -38,27 +35,12 @@ class BlocInfo extends Bloc<InfoEvent, InfoState> {
   ) {
     final experiences = repository.getExperiences();
 
-    emit(
-      GetExperiencesState(
-        state.model.copyWith(
-          experiences: experiences,
-        ),
-      ),
-    );
+    emit(GetExperiencesState(state.model.copyWith(experiences: experiences)));
   }
 
-  void _onGetProjectsEvent(
-    GetProjectsEvent event,
-    Emitter<InfoState> emit,
-  ) {
+  void _onGetProjectsEvent(GetProjectsEvent event, Emitter<InfoState> emit) {
     final projects = repository.getProjects();
 
-    emit(
-      GetProjectsState(
-        state.model.copyWith(
-          projects: projects,
-        ),
-      ),
-    );
+    emit(GetProjectsState(state.model.copyWith(projects: projects)));
   }
 }
